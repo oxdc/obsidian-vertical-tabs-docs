@@ -13,7 +13,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "umami",
+      websiteId: "d902c449-933b-4539-b6e3-1ae67701e646"
     },
     locale: "en-US",
     baseUrl: "oxdc.github.io/obsidian-vertical-tabs-docs",

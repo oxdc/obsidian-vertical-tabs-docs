@@ -1,3 +1,3 @@
 ---
-title: "Advanced Tab Navigation: Custom Strategy"
+title: Custom Strategy
 ---

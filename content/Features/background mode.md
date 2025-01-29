@@ -1,3 +1,3 @@
 ---
-title: "Feature: Background Mode"
+title: Background Mode
 ---

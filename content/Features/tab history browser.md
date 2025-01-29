@@ -1,3 +1,3 @@
 ---
-title: "Feature: Tab History Browser"
+title: Tab History Browser
 ---

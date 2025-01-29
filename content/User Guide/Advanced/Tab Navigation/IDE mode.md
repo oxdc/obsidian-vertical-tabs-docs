@@ -1,3 +1,3 @@
 ---
-title: "Advanced Tab Navigation: IDE Mode"
+title: IDE Mode
 ---

@@ -1,3 +1,3 @@
 ---
-title: "Feature: Tab Deduplication"
+title: Tab Deduplication
 ---

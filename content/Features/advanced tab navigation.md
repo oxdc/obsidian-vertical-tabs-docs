@@ -1,3 +1,3 @@
 ---
-title: "Feature: Advanced Tab Navigation"
+title: Advanced Tab Navigation
 ---

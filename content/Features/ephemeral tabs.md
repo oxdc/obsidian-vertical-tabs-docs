@@ -1,3 +1,3 @@
 ---
-title: "Feature: Ephemeral Tabs"
+title: Ephemeral Tabs
 ---

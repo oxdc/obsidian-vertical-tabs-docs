@@ -1,3 +1,3 @@
 ---
-title: "Feature: Zen Mode"
+title: Zen Mode
 ---

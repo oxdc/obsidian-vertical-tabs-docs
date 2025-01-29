@@ -1,3 +1,3 @@
 ---
-title: "Feature: Tab Groups"
+title: Tab Groups
 ---

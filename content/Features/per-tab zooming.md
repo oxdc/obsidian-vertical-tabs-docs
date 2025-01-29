@@ -1,3 +1,3 @@
 ---
-title: "Feature: Per-Tab Zooming"
+title: Per-Tab Zooming
 ---

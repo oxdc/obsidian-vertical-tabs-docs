@@ -1,3 +1,3 @@
 ---
-title: "Feature: Extended Keyboard Tab Switcher"
+title: Extended Keyboard Tab Switcher
 ---

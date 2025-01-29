@@ -8,6 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      Home: "https://oxdc.github.io/obsidian-vertical-tabs-docs",
       GitHub: "https://github.com/oxdc/obsidian-vertical-tabs",
       "Obsidian Forum": "https://forum.obsidian.md/t/new-plugin-vertical-tabs-for-obsidian/85785",
       Donate: "https://ko-fi.com/oxdcq",
@@ -31,9 +32,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.Graph(),
   ],
 }
 

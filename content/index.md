@@ -4,8 +4,6 @@ title: Vertical Tabs for Obsidian
 > [!WARNING] Notice
 > 🚧 The documentation is still under construction, and some content may be incomplete. For any questions or concerns, please visit the [Discussion Page](https://github.com/oxdc/obsidian-vertical-tabs/discussions) where you can get help and provide feedback to improve the documentation.
 
-## Vertical Tabs *for Obsidian*
-
 Productive users of Obsidian often find themselves juggling a large number of open notes, and the default horizontal tab layout can make it challenging to locate and switch between them. As more notes are opened, tabs become narrower, making titles harder to read. This can lead to decreased productivity and increased frustration.
 
 Vertical Tabs offers a solution by introducing a vertical list of tabs, allowing users to [[tab groups|group]] and [[navigation|organize]] tabs for more efficient navigation.

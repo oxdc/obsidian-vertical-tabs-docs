@@ -5,7 +5,7 @@ title: Feature Tour
 
 This plugin displays open tabs in a vertical list for easier navigation. By default, Vertical Tabs will [[name wrapping|wrap tab titles]] so you can see the full file name. You can also choose to [[name trimming|trim names]] in the [[settings]].
 
-You can [[manual sorting|manually sort tabs]] by [[drag and drop|dragging and dropping]] them, or enable [[automatic sorting]] to order tabs by name, pinned state, or recent activity. Vertical Tabs will [[sync ui|keep the UI in sync]], ensuring that the order of horizontal and vertical tabs remains consistent.
+You can [[manual sorting|manually sort tabs]] by [[drag and drop|dragging and dropping]] them, or enable [[automatic sorting]] (<img src="/Attachments/lucide-arrow-up-narrow-wide.svg" data-type="icon" />) to order tabs by name, pinned state, or recent activity. Vertical Tabs will [[sync ui|keep the UI in sync]], ensuring that the order of horizontal and vertical tabs remains consistent.
 
 Starting from Obsidian 1.8, you can [[tab preview|preview a tab]] by hovering over it while holding the <kbd>Ctrl</kbd> (Windows) or <kbd>Command</kbd> (MacOS) key. The same feature is available in Vertical Tabs.
 
@@ -41,5 +41,16 @@ For those who prefer keyboard navigation, Obsidian provides shortcuts: <kbd>Ctrl
 
 Vertical Tabs introduces the [[enhanced keyboard tab switcher]], adding two additional shortcuts to extend tab navigation. Pressing <kbd>Ctrl</kbd> + <kbd>→</kbd> (Windows) or <kbd>Command</kbd> + <kbd>→</kbd> (macOS) offsets the tab indices, allowing <kbd>Ctrl</kbd> + <kbd>1–8</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1–8</kbd> (macOS) to access tabs 9–16. The reverse action applies with <kbd>Ctrl</kbd> + <kbd>←</kbd> (Windows) or <kbd>Command</kbd> + <kbd>←</kbd> (macOS). While adjusting indices, Vertical Tabs will automatically scroll the list to ensure the tabs in range remain visible.
 
-## Customize your experience
+## Take Control of Your Tab Management
 
+By default, Obsidian behaves like a web browser—clicking a link or opening a new note replaces the content in the current tab, and reopening a note results in multiple duplicate tabs. While this approach has its benefits, it doesn’t feel like working with a physical notebook or a fully-featured editor like VSCode.
+
+In Vertical Tabs, tab behavior is managed by the [[navigation strategy]], which determines how and where new tabs open. If Obsidian’s [[default strategy]] doesn’t suit your workflow, Vertical Tabs offers [[advanced tab navigation]] with [[advanced tab navigation|five presets]]. You can also [[custom strategy|create a custom navigation strategy]] to fine-tune tab behavior according to your preferences.
+
+The [[advanced tab navigation]] system in Vertical Tabs introduces three key features: [[smart navigation]], [[ephemeral tabs]], and [[tab deduplication]].
+
+- **Smart Navigation** ensures that newly opened tabs always appear in the same group as the tab you’re working in, keeping your workspace structured. This is recommended for all users.
+- **Ephemeral Tabs** (marked with italicized titles) automatically replace themselves when you open a new note and close if you navigate away. This is useful for quickly skimming through multiple notes without cluttering your workspace with unnecessary tabs.
+- **Tab Deduplication** prevents duplicate tabs by redirecting you to an already open note instead of creating a new tab.
+
+With these features, Vertical Tabs gives you full control over how you navigate and manage your notes, making your workflow smoother and more efficient.

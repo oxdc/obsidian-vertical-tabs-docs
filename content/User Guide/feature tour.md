@@ -53,4 +53,6 @@ The [[advanced tab navigation]] system in Vertical Tabs introduces three key fea
 - **Ephemeral Tabs** (marked with italicized titles) automatically replace themselves when you open a new note and close if you navigate away. This is useful for quickly skimming through multiple notes without cluttering your workspace with unnecessary tabs.
 - **Tab Deduplication** prevents duplicate tabs by redirecting you to an already open note instead of creating a new tab.
 
-With these features, Vertical Tabs gives you full control over how you navigate and manage your notes, making your workflow smoother and more efficient.
+With these features, Vertical Tabs gives you complete control over how you navigate and manage your notes. If you choose to [[custom strategy|customize your own navigation strategy]], you’ll unlock even more options. For example, you can disable [[auto close ephemeral tabs|auto-closing]] to retain all ephemeral tabs, or fine-tune tab deduplication by specifying whether to deduplicate [[deduplicate sidebar tabs|sidebar tabs]], [[deduplicate popup tabs|popup tabs]], or [[deduplicate only same-group tabs|only tabs within the same group]].
+
+If you love the functionality of [[advanced tab navigation]] but prefer not to use a vertical tab list, you can enable the [[background mode]]. This allows you to enjoy the same streamlined navigation experience without displaying the Vertical Tabs interface, keeping your workspace clean and distraction-free.

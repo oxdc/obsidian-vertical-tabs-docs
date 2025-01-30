@@ -42,7 +42,7 @@ You can also set the hotkeys for quickly zooming in/out the current tabs. Open t
 
 ### Feature: Enhanced keyboard switcher
 
-If you love using the keyboard to quickly switch between tabs by pressing <kbd>Ctrl</kbd> + <kbd>1-9</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1-9</kbd> (MacOS), you can enable the [[enhanced keyboard tab switcher]] of Vertical Tabs.
+If you love using the keyboard to quickly switch between tabs by pressing <kbd>Ctrl</kbd> + <kbd>1–9</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1–9</kbd> (MacOS), you can enable the [[enhanced keyboard tab switcher]] of Vertical Tabs.
 ![[enhanced_keyboard_tab_switching.png|600]]
 Because Obsidian’s keyboard switcher only supports no more than 9 tabs, It becomes frustrating for power users with tons of open tabs. With the [[enhanced keyboard tab switcher]], you can press  <kbd>Ctrl</kbd> + <kbd>←/→</kbd> (Windows) or <kbd>Command</kbd> + <kbd>←/→</kbd> (MacOS) to shift the numbers and navigate to any tab in the current active groups.
 

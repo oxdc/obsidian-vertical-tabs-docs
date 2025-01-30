@@ -1,3 +1,34 @@
 ---
 title: Feature Tour
 ---
+## Vertical Tabs
+
+This plugin displays open tabs in a vertical list for easier navigation. By default, Vertical Tabs will [[name wrapping|wrap tab titles]] so you can see the full file name. You can also choose to [[name trimming|trim names]] in the [[settings]].
+
+You can [[manual sorting|manually sort tabs]] by [[drag and drop|dragging and dropping]] them, or enable [[automatic sorting]] to order tabs by name, pinned state, or recent activity. Vertical Tabs will [[sync ui|keep the UI in sync]], ensuring that the order of horizontal and vertical tabs remains consistent.
+
+Starting from Obsidian 1.8, you can [[tab preview|preview a tab]] by hovering over it while holding the <kbd>Ctrl</kbd> (Windows) or <kbd>Command</kbd> (MacOS) key. The same feature is available in Vertical Tabs.
+
+To quickly create a new tab, hover your mouse near the end of a group, and a [[new tab]] button will appear.
+
+## Stay organized
+
+In Vertical Tabs, you can organize tabs into [[tab groups]]. Behind the scenes, a tab group is essentially a workspace split in Obsidian. This ensures that your workspace layout remains consistent when installing, uninstalling, or reloading Vertical Tabs. It also guarantees that your workspace structure is automatically preserved after restarting Obsidian.
+
+Tab groups (or workspace splits) are organized topologically in Obsidian, meaning that [[drag and drop|dragging and dropping]] groups to rearrange them will *not* affect the overall layout.
+
+To make full use of [[tab groups]], you can click the edit button (<img src="/Attachments/lucide-pencil.svg" data-type="icon" />) to [[renaming a group|rename them]]. However, don’t waste time searching for the *perfect* name or category for your tabs!
+
+The golden rule is to “**keep it simple**.” You can group your tabs based on projects, responsibility scopes (e.g., personal, work), categories (e.g., tabs to review, reference tabs), status (e.g., to-do tabs, completed tabs), or purpose (e.g., reading, research). If no clear structure emerges, keep all your tabs in a single group. Don’t overcomplicate it—if the number of groups is small, renaming them isn’t necessary as long as you can find what you need. Avoid trying to replicate your folder structure.
+
+For each [[tab groups|tab group]], you can switch between different [[group views]]: [[default view]] displays only one tab at a time; [[continuous view]] allows you to edit multiple tabs as a continuous document; [[column view]] displays tabs side by side; and [[Mission Control view]] previews all tabs at once, making it easy to find what you need.
+
+## Stay focused
+
+I’ve designed Vertical Tabs to help you stay focused. When you open too many tabs, your [[horizontal tabs]] become too narrow to read. In the [[settings]], you can configure Obsidian to [[show active tabs only]] (<img src="/Attachments/lucide-app-window.svg" data-type="icon" />), maximizing the width of the active tab.
+
+If you have more than two or three groups, your workspace can become cluttered. [[zen mode|Zen Mode]] (<img src="/Attachments/lucide-focus.svg" data-type="icon" />) helps you focus by hiding all other tabs and groups, leaving only the note you’re working on. You can also click the eye icon (<img src="/Attachments/lucide-eye.svg" data-type="icon" />) to [[hide groups|hide specific groups]].
+
+If your vertical list grows too long, click the folding button (<img src="/Attachments/lucide-fold-vertical.svg" data-type="icon" />) to [[collapse groups]]. When you need to locate the active note, click the target icon (<img src="/Attachments/lucide-crosshair.svg" data-type="icon" />) to [[reveal active tab|reveal it]]. You can also [[hide sidebar tabs]] (<img src="/Attachments/lucide-panel-left.svg" data-type="icon" />) to keep the Vertical Tabs interface clean and distraction-free.
+
+## Customize your experience

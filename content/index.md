@@ -4,17 +4,17 @@ title: Vertical Tabs for Obsidian
 > [!WARNING] Notice
 > 🚧 The documentation is still under construction, and some content may be incomplete. For any questions or concerns, please visit the [Discussion Page](https://github.com/oxdc/obsidian-vertical-tabs/discussions) where you can get help and provide feedback to improve the documentation.
 
+## Getting Started
+
+To install and get started with Vertical Tabs, you can take a quick look at the [[Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[Quick Start]] guide is a good start point.
+
+## Key Benefits
+
 Productive users of Obsidian often find themselves juggling a large number of open notes, and the default horizontal tab layout can make it challenging to locate and switch between them. As more notes are opened, tabs become narrower, making titles harder to read. This can lead to decreased productivity and increased frustration.
 
 Vertical Tabs offers a solution by introducing a vertical list of tabs, allowing users to [[tab groups|group]] and [[navigation|organize]] tabs for more efficient navigation.
 
 As *the* workspace manager for Obsidian, Vertical Tabs provides many handy features like [[per-tab zooming]], [[zen mode]], [[tab history browser]], and an [[enhanced keyboard tab switcher]]. Additionally, it supports [[advanced tab navigation]] with customizable presets, such as [[IDE mode]], which delivers a VSCode-like experience with [[ephemeral tabs]] and automatic [[tab deduplication]]. Users can also create personalized [[custom strategy|tab navigation strategies]] for finer control.
-
-## Getting Started
-
-To get started with Vertical Tabs, you can take a quick look at the [[Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[Quick Start]] guide is a good start point.
-
-## Key Benefits
 
 Using Vertical Tabs can bring many benefits to your workflow, including:
 

@@ -6,7 +6,7 @@ title: Vertical Tabs for Obsidian
 
 ## Getting Started
 
-To install and get started with Vertical Tabs, you can take a quick look at the [[Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[Quick Start]] guide is a good start point.
+To install and get started with Vertical Tabs, you can take a quick look at the [[feature tour|Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[quick start|Quick Start]] guide is a good start point.
 
 ## Key Benefits
 

@@ -9,12 +9,12 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Vertical Tabs",
-    pageTitleSuffix: "for Obsidian",
+    pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "umami",
-      websiteId: "d902c449-933b-4539-b6e3-1ae67701e646"
+      websiteId: "d902c449-933b-4539-b6e3-1ae67701e646",
     },
     locale: "en-US",
     baseUrl: "oxdc.github.io/obsidian-vertical-tabs-docs",
@@ -74,6 +74,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.HardLineBreaks(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

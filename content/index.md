@@ -8,7 +8,11 @@ Productive users of Obsidian often find themselves juggling a large number of op
 
 Vertical Tabs offers a solution by introducing a vertical list of tabs, allowing users to [[tab groups|group]] and [[navigation|organize]] tabs for more efficient navigation.
 
-As *the* workspace manager for Obsidian, Vertical Tabs provides many handy features like [[per-tab zooming]], [[zen mode]], [[tab history browser]], and an [[extended keyboard tab switcher]]. Additionally, it supports [[advanced tab navigation]] with customizable presets, such as [[IDE mode]], which delivers a VSCode-like experience with [[ephemeral tabs]] and automatic [[tab deduplication]]. Users can also create personalized [[custom strategy|tab navigation strategies]] for finer control.
+As *the* workspace manager for Obsidian, Vertical Tabs provides many handy features like [[per-tab zooming]], [[zen mode]], [[tab history browser]], and an [[enhanced keyboard tab switcher]]. Additionally, it supports [[advanced tab navigation]] with customizable presets, such as [[IDE mode]], which delivers a VSCode-like experience with [[ephemeral tabs]] and automatic [[tab deduplication]]. Users can also create personalized [[custom strategy|tab navigation strategies]] for finer control.
+
+## Getting Started
+
+To get started with Vertical Tabs, you can take a quick look at the [[Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[Quick Start]] guide is a good start point.
 
 ## Key Benefits
 
@@ -17,10 +21,6 @@ Using Vertical Tabs can bring many benefits to your workflow, including:
 * **Increased productivity:** With Vertical Tabs, you can quickly and easily navigate and switch between notes, saving you time and reducing frustration.
 * **Improved organization:** Vertical Tabs allows you to [[tab groups|group]] and [[navigation|organize]] your tabs in a way that makes sense to you, making it easier to find the information you need.
 * **Enhanced navigation:** With Vertical Tabs, you can use [[advanced tab navigation]] to customize your experience in Obsidian, especially if you want IDE-like navigation behavior.
-
-## Getting Started
-
-To get started with Vertical Tabs, you can take a quick look at the [[feature tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[quick start]] guide is a good start point.
 
 ## Feedback and Support
 

@@ -13,15 +13,15 @@ To quickly create a new tab, hover your mouse near the end of a group, and a [[n
 
 ## Stay organized
 
-In Vertical Tabs, you can organize tabs into [[tab groups]]. Behind the scenes, a tab group is essentially a workspace split in Obsidian. This ensures that your workspace layout remains consistent when installing, uninstalling, or reloading Vertical Tabs. It also guarantees that your workspace structure is automatically preserved after restarting Obsidian.
+In Vertical Tabs, you can organize tabs into [[tab group|tab groups]]. Behind the scenes, a tab group is essentially a workspace split in Obsidian. This ensures that your workspace layout remains consistent when installing, uninstalling, or reloading Vertical Tabs. It also guarantees that your workspace structure is automatically preserved after restarting Obsidian.
 
-Tab groups (or workspace splits) are organized topologically in Obsidian, meaning that [[drag and drop|dragging and dropping]] groups to rearrange them will *not* affect the overall layout.
+[[tab group|Tab groups]] (or workspace splits) are organized topologically in Obsidian, meaning that [[drag and drop|dragging and dropping]] groups to rearrange them will *not* affect the overall layout.
 
-To make full use of [[tab groups]], you can click the edit button (<img src="/Attachments/lucide-pencil.svg" data-type="icon" />) to [[renaming a group|rename them]]. However, don’t waste time searching for the *perfect* name or category for your tabs!
+To make full use of [[tab group|tab groups]], you can click the edit button (<img src="/Attachments/lucide-pencil.svg" data-type="icon" />) to [[renaming a group|rename them]]. However, don’t waste time searching for the *perfect* name or category for your tabs!
 
 The golden rule is to “**keep it simple**.” You can group your tabs based on projects, responsibility scopes (e.g., personal, work), categories (e.g., tabs to review, reference tabs), status (e.g., to-do tabs, completed tabs), or purpose (e.g., reading, research). If no clear structure emerges, keep all your tabs in a single group. Don’t overcomplicate it—if the number of groups is small, renaming them isn’t necessary as long as you can find what you need. Avoid trying to replicate your folder structure.
 
-For each [[tab groups|tab group]], you can switch between different [[group views]]: [[default view]] displays only one tab at a time; [[continuous view]] allows you to edit multiple tabs as a continuous document; [[column view]] displays tabs side by side; and [[Mission Control view]] previews all tabs at once, making it easy to find what you need.
+For each [[tab group]], you can switch between different [[group views]]: [[default view]] displays only one tab at a time; [[continuous view]] allows you to edit multiple tabs as a continuous document; [[column view]] displays tabs side by side; and [[Mission Control view]] previews all tabs at once, making it easy to find what you need.
 
 ## Stay focused
 
@@ -31,4 +31,15 @@ If you have more than two or three groups, your workspace can become cluttered. 
 
 If your vertical list grows too long, click the folding button (<img src="/Attachments/lucide-fold-vertical.svg" data-type="icon" />) to [[collapse groups]]. When you need to locate the active note, click the target icon (<img src="/Attachments/lucide-crosshair.svg" data-type="icon" />) to [[reveal active tab|reveal it]]. You can also [[hide sidebar tabs]] (<img src="/Attachments/lucide-panel-left.svg" data-type="icon" />) to keep the Vertical Tabs interface clean and distraction-free.
 
+## Easily navigate
+
+By default, Obsidian allows you to zoom in or out on the entire UI using <kbd>Ctrl</kbd> + <kbd>+/-</kbd> (Windows) or <kbd>Command</kbd> + <kbd>+/-</kbd> (macOS). If you need finer control—allowing each tab to have a different zoom level without affecting other parts of the UI—you can enable [[per-tab zooming]] in the [[settings]]. This is particularly useful when working with notes that contain wide tables or images, especially on smaller laptop screens.
+
+Obsidian provides navigation buttons (<img src="/Attachments/lucide-arrow-left.svg" data-type="icon" /> / <img src="/Attachments/lucide-arrow-right.svg" data-type="icon" />) to move backward or forward between notes. However, Vertical Tabs extends this functionality. By right-clicking a vertical tab, you gain access to the full [[tab history]] through the context menu, allowing you to navigate, browse, bookmark, or clear the history. You can even open the tab history as a new [[tab group]].
+
+For those who prefer keyboard navigation, Obsidian provides shortcuts: <kbd>Ctrl</kbd> + <kbd>1–8</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1–8</kbd> (macOS) to jump to the first eight tabs in the current [[tab group]], and <kbd>Ctrl</kbd> + <kbd>9</kbd> (Windows) or <kbd>Command</kbd> + <kbd>9</kbd> (macOS) to jump to the last tab. However, when more than nine tabs are open, this becomes limiting, forcing users to rely on a mouse or trackpad, disrupting the navigation experience.
+
+Vertical Tabs introduces the [[enhanced keyboard tab switcher]], adding two additional shortcuts to extend tab navigation. Pressing <kbd>Ctrl</kbd> + <kbd>→</kbd> (Windows) or <kbd>Command</kbd> + <kbd>→</kbd> (macOS) offsets the tab indices, allowing <kbd>Ctrl</kbd> + <kbd>1–8</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1–8</kbd> (macOS) to access tabs 9–16. The reverse action applies with <kbd>Ctrl</kbd> + <kbd>←</kbd> (Windows) or <kbd>Command</kbd> + <kbd>←</kbd> (macOS). While adjusting indices, Vertical Tabs will automatically scroll the list to ensure the tabs in range remain visible.
+
 ## Customize your experience
+

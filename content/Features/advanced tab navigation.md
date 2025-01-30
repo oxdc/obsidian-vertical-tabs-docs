@@ -1,7 +1,7 @@
 ---
 title: Advanced Tab Navigation
 ---
-For years, users have called for a better tab navigation experience in Obsidian. Preferences vary — some users like opening notes in new tabs, others prefer IDE-style workflows, while some aim to avoid duplicate tabs entirely. Managing multiple tab groups has often led to confusion, and while a few plugins provide partial solutions, they tend to fall short — working only in specific scenarios or with certain plugins.
+For years, users have called for a better tab navigation experience in Obsidian. Preferences vary — some users like opening notes in new tabs, others prefer IDE-style workflows, while some aim to avoid duplicate tabs entirely. Managing multiple [[tab group|tab groups]] has often led to confusion, and while a few plugins provide partial solutions, they tend to fall short — working only in specific scenarios or with certain plugins.
 
 Vertical Tabs presents a universal, seamless, and consistent solution designed to work across the entire Obsidian ecosystem. Vertical Tabs offers five powerful preset strategies to match different workflows. You can also create custom strategies tailored to your preferences.
 

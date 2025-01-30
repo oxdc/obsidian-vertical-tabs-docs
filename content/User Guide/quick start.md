@@ -22,7 +22,7 @@ After a few seconds, Vertical Tabs should be installed successfully. You need to
 
 ## Configure Vertical Tabs
 
-Now it’s time to check the core features and customize Vertical Tabs for your needs. Please click the **Options** button. This will open the [[Settings]] page of Vertical Tabs. 
+Now it’s time to check the core features and customize Vertical Tabs for your needs. Please click the **Options** button. This will open the [[settings]] page of Vertical Tabs. 
 ![[options.png|600]]
 ### Feature: “Show active tabs only”
 
@@ -48,7 +48,7 @@ Because Obsidian’s keyboard switcher only supports no more than 9 tabs, It bec
 
 ### Feature: Advanced tab navigation
 
-Tab navigation controls the location of newly-opened tabs. By default, when you open a new note, Obsidian will replace your current note, similar to a web browser. If this is not what you want, you can [[advanced tab navigation|choose]] or [[custom strategy|design your own tab navigation strategy]] in the settings.
+Tab navigation controls the location of newly-opened tabs. By default, when you open a new note, Obsidian will replace your current note, similar to a web browser. If this is not what you want, you can [[advanced tab navigation|choose]] or [[custom strategy|design your own tab navigation strategy]] in the [[settings]].
 ![[advanced_tab_navigation.png|600]]
 Here’s a few rules for helping you choose the right one:
 

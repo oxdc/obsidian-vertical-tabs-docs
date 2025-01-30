@@ -19,6 +19,10 @@ img[data-type="icon"] {
   height: 18px;
 }
 
+:root[saved-theme="dark"] img[data-type="icon"] {
+  filter: invert(0.8);
+}
+
 num {
   display: inline-block;
   width: 16px;

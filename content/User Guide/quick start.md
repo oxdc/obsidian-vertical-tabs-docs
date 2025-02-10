@@ -44,7 +44,7 @@ You can also set the hotkeys for quickly zooming in/out the current tabs. Open t
 
 If you love using the keyboard to quickly switch between tabs by pressing <kbd>Ctrl</kbd> + <kbd>1–9</kbd> (Windows) or <kbd>Command</kbd> + <kbd>1–9</kbd> (MacOS), you can enable the [[enhanced keyboard tab switcher]] of Vertical Tabs.
 ![[enhanced_keyboard_tab_switching.png|600]]
-Because Obsidian’s keyboard switcher only supports no more than 9 tabs, It becomes frustrating for power users with tons of open tabs. With the [[enhanced keyboard tab switcher]], you can press  <kbd>Ctrl</kbd> + <kbd>←/→</kbd> (Windows) or <kbd>Command</kbd> + <kbd>←/→</kbd> (MacOS) to shift the numbers and navigate to any tab in the current active groups.
+Because Obsidian’s keyboard switcher only supports no more than 9 tabs, it becomes frustrating for power users with tons of open tabs. With the [[enhanced keyboard tab switcher]], you can press  <kbd>Ctrl</kbd> + <kbd>←/→</kbd> (Windows) or <kbd>Command</kbd> + <kbd>←/→</kbd> (MacOS) to shift the numbers and navigate to any tab in the current active groups.
 
 ### Feature: Advanced tab navigation
 
@@ -79,6 +79,25 @@ You can also fold (<img src="/Attachments/lucide-fold-vertical.svg" data-type="i
 ![[fold_groups.png|600]]
 If you get lost in your workspace and can’t find the active tab in Vertical Tabs, click the target icon (<img src="/Attachments/lucide-crosshair.svg" data-type="icon" />), and it will reveal and scroll to that tab.
 ![[reveal_tab.png|600]]
+
+## Stay updated
+
+Vertical Tabs is actively developed, with frequent bug fixes and exciting new features being added. To ensure you’re always using the latest version, here are a few ways to stay informed:
+
+1. **Check for updates in Obsidian**: 
+   - Go to **Settings** (<img src="/Attachments/lucide-settings.svg" data-type="icon" />) → **Community plugins** → **Check for updates**.
+   - If an update is available, click **Update** to install the latest version.
+
+2. **Follow the forum and Discord**: 
+   - Visit [the forum](https://forum.obsidian.md/t/new-plugin-vertical-tabs-for-obsidian/85785) for announcements and discussions.
+   - Join [the Discord channel #updates](https://discord.com/channels/686053708261228577/855181471643861002) for real-time notifications and community support.
+
+3. **Use Obsidian Plugin Update Tracker**:
+   - Install [Obsidian Plugin Update Tracker](obsidian://show-plugin?id=obsidian-plugin-update-tracker) in your vault. This plugin will notify you when a new version of Vertical Tabs (or any other plugin) is released.
+
+4. **Subscribe to the GitHub repository**:
+   - Star and watch the [Vertical Tabs GitHub repository](https://github.com/oxdc/obsidian-vertical-tabs) to receive notifications about new releases.
+
 ## Conclusion
 
 That’s all for today! 🎉 Thank you for reading, and I hope this guide helped you get started with Vertical Tabs. If you have any questions, feel free to check out the [[index|other parts of the documentation]] or [join the community discussions](https://github.com/oxdc/obsidian-vertical-tabs/discussions). Enjoy your Obsidian experience, and happy note-taking!

@@ -45,7 +45,7 @@ Vertical Tabs introduces the [[enhanced keyboard tab switcher]], adding two addi
 
 By default, Obsidian behaves like a web browser—clicking a link or opening a new note replaces the content in the current tab, and reopening a note results in multiple duplicate tabs. While this approach has its benefits, it doesn’t feel like working with a physical notebook or a fully-featured editor like VSCode.
 
-In Vertical Tabs, tab behavior is managed by the [[navigation strategy]], which determines how and where new tabs open. If Obsidian’s [[default strategy]] doesn’t suit your workflow, Vertical Tabs offers [[advanced tab navigation]] with [[advanced tab navigation|five presets]]. You can also [[custom strategy|create a custom navigation strategy]] to fine-tune tab behavior according to your preferences.
+In Vertical Tabs, tab behavior is managed by the [[navigation strategy]], which determines how and where new notes open. If Obsidian’s [[default strategy]] doesn’t suit your workflow, Vertical Tabs offers [[advanced tab navigation]] with [[advanced tab navigation|five presets]]. You can also [[custom strategy|create a custom navigation strategy]] to fine-tune tab behavior according to your preferences.
 
 The [[advanced tab navigation]] system in Vertical Tabs introduces three key features: [[smart navigation]], [[ephemeral tabs]], and [[tab deduplication]].
 

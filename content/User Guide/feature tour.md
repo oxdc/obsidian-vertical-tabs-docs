@@ -7,6 +7,8 @@ This plugin displays open tabs in a vertical list for easier navigation. By defa
 
 You can [[manual sorting|manually sort tabs]] by [[drag and drop|dragging and dropping]] them, or enable [[automatic sorting]] (<img src="/Attachments/lucide-arrow-up-narrow-wide.svg" data-type="icon" />) to order tabs by name, pinned state, or recent activity. Vertical Tabs will [[sync ui|keep the UI in sync]], ensuring that the order of horizontal and vertical tabs remains consistent.
 
+![[vertical_tabs.png|500]]
+
 Starting from Obsidian 1.8, you can [[tab preview|preview a tab]] by hovering over it while holding the <kbd>Ctrl</kbd> (Windows) or <kbd>Command</kbd> (MacOS) key. The same feature is available in Vertical Tabs.
 
 To quickly create a new tab, hover your mouse near the end of a group, and a [[new tab]] button will appear.

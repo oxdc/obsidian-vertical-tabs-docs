@@ -9,7 +9,7 @@ While this default behavior works for some, it can be frustrating for others. Fo
 
 Vertical Tabs addresses these concerns by offering a universal, seamless, and consistent solution that integrates smoothly across the entire Obsidian ecosystem. This article delves into the design and mechanics of tab navigation strategies, providing you with the essence to tailor your tab navigation to your specific workflow.
 
-Vertical Tabs comes equipped with five powerful preset strategies, each designed to cater to different user needs. If you're looking for quick recommendations on which strategy to choose, refer to [[abc of advanced tab navigation|the ABC of advanced tab navigation]].
+Vertical Tabs comes equipped with [[#Preset strategies|five powerful preset strategies]], each designed to cater to different user needs. If you're looking for quick recommendations on which strategy to choose, refer to [[abc of advanced tab navigation|the ABC of advanced tab navigation]].
 
 For those who find the presets insufficient, Vertical Tabs also allows you to create custom navigation strategies. If you're considering this route, it's essential to fully grasp the concepts discussed in this article to make the most of the customization options available.
 
@@ -71,7 +71,11 @@ Vertical Tabs offers [[tab deduplication|several customization options]] to refi
 
 Link tasks are internal processes that Vertical Tabs executes when you click a link with [[tab deduplication]] enabled. These tasks ensure that the correct section of the note, as specified by the link, is automatically scrolled into view. This is particularly useful for navigating long notes or documents, as it saves you the effort of manually searching for the relevant section. Unlike [[tab deduplication]], link tasks are non-configurable and operate in the background.
 
-## Specifications
+## Preset strategies
+
+Vertical Tabs provides five preset navigation strategies other than Obsidian’s default: Obsidian+, Explorer, IDE, Notebook and Prefer new tab.
+
+### Specifications
 
 The following table lists the preset configurations.
 

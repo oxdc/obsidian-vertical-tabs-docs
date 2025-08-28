@@ -73,7 +73,7 @@ All data processing is performed:
 ### Ko-fi
 - **Purpose**: Subscription and payment processing
 - **Data Shared**: Email address and subscription details
-- **Privacy**: Governed by [Ko-fi's Privacy Policy](https://ko-fi.com/privacy)
+- **Privacy**: Governed by [Ko-fi's Privacy Policy](https://more.ko-fi.com/privacy)
 
 ### GitHub
 - **Purpose**: Source code hosting, version checking, and beta distribution

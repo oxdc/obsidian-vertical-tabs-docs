@@ -1,6 +1,10 @@
 ---
 title: "Vertical Tabs Beta Program"
 ---
+
+> [!WARNING] Notice
+> The Vertical Tabs Beta Program has not been announced yet. Please DO NOT subscribe at this time.
+
 ## Overview
 
 The Vertical Tabs Beta Program provides early access to new features, exclusive Discord community access, and the opportunity to support ongoing development. By subscribing, you'll receive beta builds before public release and help shape the future of Vertical Tabs.

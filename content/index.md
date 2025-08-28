@@ -2,7 +2,7 @@
 title: Vertical Tabs for Obsidian
 ---
 > [!WARNING] Notice
-> 🚧 The documentation is still under construction, and some content may be incomplete. For any questions or concerns, please visit the [Discussion Page](https://github.com/oxdc/obsidian-vertical-tabs/discussions) where you can get help and provide feedback to improve the documentation.
+> 🚧 Hey there! The docs are still a work in progress, so you might find some gaps here and there. If you have questions or run into any issues, feel free to drop by the [Discussion Page](https://github.com/oxdc/obsidian-vertical-tabs/discussions) – I'd love to help out and hear your feedback!
 
 ## Getting Started
 

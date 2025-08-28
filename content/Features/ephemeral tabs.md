@@ -7,7 +7,7 @@ Ephemeral tabs are a powerful feature in Vertical Tabs that allow you to quickly
 
 Ephemeral tabs are visually distinct — they appear with *italicized titles* in your tab list, making them easy to identify at a glance.
 
-## How ephemeral tabs work
+## How ephemeral tabs work?
 
 At its core, ephemeral tabs implement a dynamic navigation modifier that helps maintain a clean workspace. For enthusiastic users, you may refer to the guide of [[advanced tab navigation]] for details on the implementation.
 

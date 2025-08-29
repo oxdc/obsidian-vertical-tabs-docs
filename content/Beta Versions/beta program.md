@@ -28,6 +28,9 @@ A: No. All Vertical Tabs features remain free forever. Public releases typically
 **Q: How do I subscribe or unsubscribe?**
 A: All subscriptions are managed through my [Ko-fi page](https://ko-fi.com/oxdcq). You can unsubscribe at any time and will continue receiving updates until your next billing cycle.
 
+**Q: Can I continue using the beta versions after unsubscribing?**
+A: Yes! An active subscription is only required to receive new beta versions. You can continue using any installed beta versions on your devices until the public release becomes available. If you want to use the received beta version on a new device, you'll need to manually copy or sync it to that device.
+
 **Q: Is there a student discount?**
 A: Currently, no student discount is available. However, all Vertical Tabs features remain completely free in the public version, which receives updates 3-6 months after beta testing.
 

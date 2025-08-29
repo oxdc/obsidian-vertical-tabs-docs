@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 .vt-install-button {
   padding: 6px 32px;
@@ -47,4 +48,18 @@ kbd {
   padding: 2px 4px;
   font-size: 90%;
   font-family: var(--codeFont);
+}
+
+.sidebar.right {
+  @media all and not ($desktop) {
+    flex-direction: column !important;
+
+    & > * {
+      flex-basis: auto !important;
+    }
+
+    & .overflow {
+      height: unset !important;
+    }
+  }
 }

@@ -33,8 +33,8 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
+    Component.MobileOnly(Component.Explorer()),
     Component.Backlinks(),
-    Component.Graph(),
   ],
 }
 

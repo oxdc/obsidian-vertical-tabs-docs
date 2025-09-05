@@ -72,6 +72,20 @@ A: Tokens are tied to your email and require an active subscription. If you resu
 **Q: What data does the beta program collect?**
 A: For privacy reasons, Vertical Tabs Beta and [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) do not collect device information. Only your email and subscription status are tracked for access management. For complete details, please review [[security|Security and Privacy Policy]].
 
+**Q: What security features are implemented in beta versions?**
+A: Beta versions include enhanced security measures _not_ present in stable versions:
+- **Reproducible Builds**: Ensures identical source code produces identical binaries, enabling independent verification. Once the source code is published, anyone can verify that previously received beta builds were generated from that exact code without backdoors or malicious modifications.
+- **File Integrity and Digital Signatures**: SHA-256 hashes and Ed25519 cryptographic signatures verify files remain unmodified after signing and confirm builds originate from the official developer, preventing attacks that attempt to replace or tamper with code during distribution.
+- **Extended Manifest**: Contains timestamps and security metadata for comprehensive verification and audit trails.
+
+**Q: Why are these additional security measures necessary?**
+A: These features are essential because beta builds are distributed through private channels outside Obsidian's official plugin store, which provides automatic security review. These measures compensate for the lack of centralized security validation by enabling users to independently verify that beta builds are authentic, unmodified, and originate from the legitimate developer.
+
+**Q: I received a security warning about modified files. What should I do?**
+A: If you have modified the plugin's code or CSS files, a security warning will appear in Settings. Here's what to do:
+- **For CSS styling**: Use Obsidian's [CSS snippets](https://help.obsidian.md/snippets) instead. Go to Settings → Appearance → CSS snippets, create a new `.css` file in the snippets folder, and add your custom styles there. This approach is safer and won't trigger security warnings.
+- **For code modifications**: It is strongly discouraged to modify the plugin code directly. Please report the issue or feature request through the [GitHub repository](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose) instead. If you must proceed with modifications, you can disable the warning through the [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin settings, but this may expose your installation to security risks. **Note**: If you choose to ignore or disable this warning, you are responsible for your own security and any potential consequences.
+
 ### Troubleshooting
 
 **Q: My access token isn't working. What should I do?**

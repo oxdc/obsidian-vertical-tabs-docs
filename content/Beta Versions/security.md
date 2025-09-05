@@ -1,7 +1,7 @@
 ---
 title: "Security and Privacy Policy"
 ---
-**Last Updated:** August 2025
+**Last Updated:** September 2025
 **Effective Date:** August 2025
 
 This Security and Privacy Policy explains how the Vertical Tabs plugin and its Beta Program collect, use, and protect your information. This policy covers three distinct components: 1) the stable Vertical Tabs plugin, 2) the beta version of Vertical Tabs, and 3) the Beta Helper plugin.
@@ -62,6 +62,21 @@ All data processing is performed:
 - **Access Controls**: Limited access to personal information
 - **Regular Audits**: Security practices are regularly reviewed
 - **Secure Development**: Following secure coding practices
+
+### Beta Build Security Features
+Beta versions include security measures _not_ present in stable versions:
+- **Reproducible Builds**: Deterministic compilation ensures identical source code produces identical binaries, enabling independent verification
+- **File Integrity Verification**: SHA-256 hashes detect unauthorized modifications after signing
+- **Digital Signatures**: Ed25519 signatures embedded in manifests prove authenticity from the official developer
+- **Embedded Public Keys**: Public keys embedded in plugin code enable offline signature verification
+- **Extended Manifest Format**: Includes build timestamps, file hashes, and signature data for security verification
+- **Multi-Stage Verification**: Build pipeline verifies signatures and integrity at multiple points
+
+**Why These Features Are Necessary**: Beta builds are distributed outside Obsidian's official plugin store, which provides automatic security review. These measures enable users to independently verify that beta builds are authentic and unmodified.
+
+**Security Warnings for Modified Files**: If you modify the plugin's code or CSS files, a security warning will appear in the Settings tab. This warning system alerts you to potential security risks associated with unauthorized modifications:
+- **For CSS modifications**: Use Obsidian's [CSS snippets](https://help.obsidian.md/snippets) feature instead (Settings → Appearance → CSS snippets), which is safer and won't trigger security warnings.
+- **For code modifications**: Direct code modifications are strongly discouraged. Please report issues or feature requests through our [GitHub repository](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose). If you proceed with modifications despite warnings, you can disable the security alert through the [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin settings, but this may expose your installation to security risks, and you assume responsibility for any potential consequences.
 
 ### Data Retention
 - **Active Subscriptions**: Data retained while subscription is active
@@ -147,6 +162,16 @@ We are committed to complying with applicable privacy laws and regulations, incl
 - California Consumer Privacy Act (CCPA)
 - Other applicable local privacy laws
 
+### Regulatory Compliance Assessment
+
+**Age Verification and Online Safety Laws**: We have assessed the impact of the UK's Online Safety Act and similar age verification legislation worldwide on our services. As a productivity plugin for Obsidian that does not host user-generated content, facilitate social interactions, or provide access to content harmful to minors, age verification requirements do not directly apply to our plugin.
+
+For beta program subscriptions, age verification is handled by our payment platform Ko-fi and their payment providers (PayPal and Stripe). [Ko-fi's Terms of Service require users to be 18 years or older to create an account](https://more.ko-fi.com/terms), and payment processors maintain their own age verification measures during transactions. This verification responsibility lies with the payment platform, not with our plugin service.
+
+Users under 13 are not eligible for the beta program as stated in our Children's Privacy section. We continue to monitor regulatory developments globally and will implement appropriate measures if our service scope changes or if similar laws in other jurisdictions require compliance.
+
+**Content Classification**: Our plugin provides workspace organization functionality and does not host, generate, or distribute content that would be classified as harmful under current legislation.
+
 ## Definitions
 
 - **Personal Data**: Any information that identifies or can identify an individual
@@ -171,6 +196,8 @@ We are committed to complying with applicable privacy laws and regulations, incl
 - **Future Open Source**: Will be published under MIT License after beta testing, feedback collection, and bug fixes (as detailed in the [[beta program|Beta Program documentation]])
 - **Network Usage**: No direct network requests (managed through Beta Helper)
 - **No Dynamic Ads**: No advertisements are inserted
+- **Beta Build Security**: Implements reproducible builds, file integrity verification, and cryptographic signatures (not present in stable version)
+- **Independent Verification**: Beta builds include embedded signatures and file hashes to verify authenticity outside the official plugin store
 
 #### 3. Beta Helper Plugin
 - **No Client-Side Telemetry**: Contains no client-side telemetry

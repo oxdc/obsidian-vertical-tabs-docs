@@ -51,7 +51,7 @@ A: No. Vertical Tabs remains fully open source. After beta testing, feedback col
 A: Yes. Please [open an issue](https://github.com/oxdc/obsidian-vertical-tabs/issues) with your request. I'll review it and provide a free access token for development purposes.
 
 **Q: I have concerns about security and privacy.**
-A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin only communicates with secure servers to verify your access token and download updates. No personal data, vault contents, or device information is collected or transmitted. Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. For complete details, please review [[security|Security and Privacy Policy]].
+A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin only communicates with secure servers to verify your access token and download updates. No personal data, vault contents, or device information is collected or transmitted. Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. Beta builds include reproducible build verification - see [[verify build.md|Verifying Reproducible Beta Builds]] for independent verification instructions. For complete details, please review [[security|Security and Privacy Policy]].
 
 ### Usage and Licensing
 
@@ -74,12 +74,12 @@ A: For privacy reasons, Vertical Tabs Beta and [Beta Helper](https://github.com/
 
 **Q: What security features are implemented in beta versions?**
 A: Beta versions include enhanced security measures _not_ present in stable versions:
-- **Reproducible Builds**: Ensures identical source code produces identical binaries, enabling independent verification. Once the source code is published, anyone can verify that previously received beta builds were generated from that exact code without backdoors or malicious modifications.
+- **Reproducible Builds**: Ensures identical source code produces identical binaries, enabling independent verification. Once the source code is published, anyone can verify that previously received beta builds were generated from that exact code without backdoors or malicious modifications. For detailed verification instructions, see [[verify build.md|Verifying Reproducible Beta Builds]].
 - **File Integrity and Digital Signatures**: SHA-256 hashes and Ed25519 cryptographic signatures verify files remain unmodified after signing and confirm builds originate from the official developer, preventing attacks that attempt to replace or tamper with code during distribution.
 - **Extended Manifest**: Contains timestamps and security metadata for comprehensive verification and audit trails.
 
 **Q: Why are these additional security measures necessary?**
-A: These features are essential because beta builds are distributed through private channels outside Obsidian's official plugin store, which provides automatic security review. These measures compensate for the lack of centralized security validation by enabling users to independently verify that beta builds are authentic, unmodified, and originate from the legitimate developer.
+A: These features are essential because beta builds are distributed through private channels outside Obsidian's official plugin store, which provides automatic security review. These measures compensate for the lack of centralized security validation by enabling users to independently verify that beta builds are authentic, unmodified, and originate from the legitimate developer. Advanced users can perform this verification using the process detailed in [[verify build.md|Verifying Reproducible Beta Builds]].
 
 **Q: I received a security warning about modified files. What should I do?**
 A: If you have modified the plugin's code or CSS files, a security warning will appear in Settings. Here's what to do:

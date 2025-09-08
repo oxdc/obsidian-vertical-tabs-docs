@@ -23,6 +23,9 @@ A: After subscribing, you'll receive an email with a unique access token. Keep t
 **Q: What is the Beta Helper plugin?**
 A: The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) is a companion plugin that manages beta version downloads and updates. It's open source and can be installed manually or automatically through the [BRAT](https://github.com/TfTHacker/obsidian42-brat) plugin (by [@TfTHacker](https://github.com/TfTHacker)).
 
+**Q: Why is the Beta Helper plugin needed?**
+A: The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin is highly recommended but not required. While you can download and install beta versions manually, the Beta Helper automates version management and provides crucial downgrade capabilities. Manual installation only supports upgrades—downgrading requires handling inconsistent settings and internal data structures. The Beta Helper solves this by automatically converting settings and creating backups when switching between versions. If you encounter issues with the latest beta, you can downgrade to any previous version with a single click, ensuring your settings and personalizations remain consistent across all installed versions.
+
 ### Development and Open Source
 
 **Q: Does this make Vertical Tabs closed source?**
@@ -32,7 +35,7 @@ A: No. Vertical Tabs remains fully open source. After beta testing, feedback col
 A: Yes. Please [open an issue](https://github.com/oxdc/obsidian-vertical-tabs/issues) with your request. I'll review it and provide a free access token for development purposes.
 
 **Q: I have concerns about security and privacy.**
-A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin only communicates with secure servers to verify your access token and download updates. No personal data, vault contents, or device information is collected or transmitted. Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. Beta builds include reproducible build verification - see [[verify build.md|Verifying Reproducible Beta Builds]] for independent verification instructions. For complete details, please review [[security|Security and Privacy Policy]].
+A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin only communicates with secure servers to verify your access token and download updates. No personal data, vault contents, or device information is collected or transmitted. Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. Beta builds include reproducible build verification—see [[verify build.md|Verifying Reproducible Beta Builds]] for independent verification instructions. For complete details, please review [[security|Security and Privacy Policy]].
 
 ### Usage and Licensing
 

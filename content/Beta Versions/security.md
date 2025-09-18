@@ -80,7 +80,7 @@ Beta versions include security measures _not_ present in stable versions:
 
 ### Data Retention
 - **Active Subscriptions**: Data retained while subscription is active
-- **Inactive Subscriptions**: Data deleted within 30 days of cancellation
+- **Inactive Subscriptions**: Data deleted within 90 days of cancellation
 - **Access Tokens**: Revoked immediately upon subscription cancellation
 
 ## Third-Party Services

@@ -106,61 +106,80 @@ git rev-parse HEAD  # Should match your commit hash
 
 ### Step 4: Install Node.js and Bun
 
-Install Node.js (required for Bun) and then Bun, the JavaScript runtime used for building:
+Install the exact same versions used in the CI build process:
 
 ```bash
-# Install Node.js (choose method appropriate for your system)
+# Install Node.js version 20 (exact version used by CI)
 
 # Option 1: Using Node Version Manager (nvm) - Recommended
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 # Restart your terminal or run:
 source ~/.bashrc  # or ~/.zshrc for zsh users
-nvm install --lts
-nvm use --lts
+nvm install 20
+nvm use 20
 
 # Option 2: Using package manager (Ubuntu/Debian)
-sudo apt update
-sudo apt install nodejs npm
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Option 3: Using package manager (macOS with Homebrew)
-brew install node
+brew install node@20
+brew link node@20
 
-# Verify Node.js installation
+# Verify Node.js installation (should be version 20.x.x)
 node --version
 npm --version
 
-# Install Bun (restart terminal after Node.js installation)
-curl -fsSL https://bun.sh/install | bash
+# Install Bun version 1.2.21 (exact version used by CI)
+curl -fsSL https://bun.sh/install | bash -s "bun-v1.2.21"
 
-# Or using npm if curl method fails
-npm install -g bun
+# Or using npm with specific version
+npm install -g bun@1.2.21
 
 # Restart your terminal to ensure Bun is in PATH
 source ~/.bashrc  # or ~/.zshrc for zsh users
 
-# Verify Bun installation
+# Verify Bun installation (should be version 1.2.21)
 bun --version
 ```
 
-> [!NOTE] Node.js Requirement
-> Bun requires Node.js to be installed first. The Node Version Manager (nvm) approach is recommended as it allows you to easily manage Node.js versions and ensures a clean installation.
+> [!IMPORTANT] Version Requirements
+> For reproducible builds, you must use the exact same versions as the CI environment:
+> - **Node.js**: version 20.x.x
+> - **Bun**: version 1.2.21  
+> Using different versions may result in build differences that prevent successful verification.
 
-### Step 5: Install Dependencies
+### Step 5: Set Up Build Environment
+
+Configure the environment variables required for the build:
+
+```bash
+# Create the required environment file for the build
+echo "EMBEDDED_PUBLIC_KEY=ed25519_public_key_here" > .env
+
+# Note: This public key must match the one used in the original CI build
+# You can find the public key in your received build files or obtain it from the repo
+```
+
+> [!IMPORTANT] Public Key Requirement
+> The build process requires an embedded public key for signature verification. This key must match exactly the one used in the original CI build.
+
+### Step 6: Install Dependencies
 
 Install the exact dependencies used during the original build:
 
 ```bash
-# Install dependencies with locked versions
-bun install --frozen-lockfile
+# Install dependencies with strict lockfile enforcement
+bun ci
 
 # Verify the lockfile matches the commit
 git status
 ```
 
 > [!WARNING] Dependency Consistency
-> The `--frozen-lockfile` flag ensures you install the exact same dependency versions that were used in the original build. This is crucial for reproducibility.
+> The `bun ci` command ensures you install the exact same dependency versions that were used in the original build and will fail if the `package.json` is out of sync with the lockfile. This is crucial for reproducibility.
 
-### Step 6: Build the Initial File
+### Step 7: Build the Initial File
 
 Generate the initial build file using the same process as the CI workflow:
 
@@ -172,7 +191,7 @@ bun run build:beta
 ls -la dist/main.js
 ```
 
-### Step 7: Generate the Mangled File
+### Step 8: Generate the Mangled File
 
 Use the mangling script with your specific build parameters:
 
@@ -190,7 +209,7 @@ bun run mangle.mjs ./dist/main.js 1 "ABC2EFG3JKM4PQR5" "v0.199.0-beta-20990909" 
 
 This generates `./dist/main-1.js` with your specific mangling parameters applied.
 
-### Step 8: Compare the Files
+### Step 9: Compare the Files
 
 Compare your generated file with the received file:
 
@@ -199,7 +218,7 @@ Compare your generated file with the received file:
 diff ./dist/main-1.js /path/to/your/received/main.js
 ```
 
-### Step 9: Interpret the Results
+### Step 10: Interpret the Results
 
 **Successful verification** shows only timestamp differences in the build info header:
 
@@ -227,11 +246,17 @@ No other differences should appear. If the files are identical except for timest
 ```bash
 # Clear cache and reinstall dependencies
 rm -rf node_modules bun.lockb
-bun install --frozen-lockfile
+bun ci
 
 # If issues persist, check Node.js/Bun versions
-node --version
-bun --version
+node --version  # Should be 20.x.x
+bun --version   # Should be 1.2.21
+
+# If versions don't match, reinstall with correct versions
+# For Node.js version 20:
+nvm install 20 && nvm use 20
+# For Bun version 1.2.21:
+bun upgrade --version 1.2.21
 ```
 
 ### Mangle Script Fails
@@ -275,6 +300,30 @@ bun run mangle.mjs ./dist/main.js 1 "ABC2EFG3JKM4PQR5" "v0.199.0-beta-20990909" 
 - Use a clean virtual machine or container
 - Avoid modifying system-wide Node.js or Bun installations
 - Ensure no global packages interfere with the build process
+
+**Operating System Considerations:**
+
+The CI environment uses Ubuntu 22.04, which may produce slightly different results than other operating systems. For best reproducibility, consider using a Ubuntu 22.04 environment through Docker (`docker run -it ubuntu:22.04 /bin/bash`), a virtual machine (Ubuntu 22.04 LTS), or WSL2 (`wsl --install Ubuntu-22.04`). If using a different operating system, potential differences may include line ending variations (CRLF vs LF), file path separator differences (Windows vs Unix), and system library differences that could affect native dependencies.
+
+**System Dependencies Audit:**
+
+The build process depends on the following system tools that should be consistent:
+
+- **Git**: For repository operations and commit verification
+- **SHA256 utilities**: For hash verification (`sha256sum` on Linux, `shasum -a 256` on macOS)
+- **Standard Unix tools**: `curl`, `grep`, `diff`, `ls`, `cat`
+- **File system**: Case sensitivity and permission handling
+
+**Minimizing Environment Differences:**
+
+```bash
+# Ensure consistent Git configuration for line endings
+git config --global core.autocrlf false
+git config --global core.eol lf
+
+# For Windows users, ensure Unix-style line endings
+git config --global core.autocrlf input
+```
 
 ## Security Considerations
 

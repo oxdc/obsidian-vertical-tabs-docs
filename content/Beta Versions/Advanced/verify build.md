@@ -24,10 +24,17 @@ The verification process requires command-line tools that are pre-installed on m
 - **Git**: For cloning the repository and checking out specific commits
 - **curl**: For downloading Bun and other tools
 - **diff**: For comparing generated files with your received build
+- **jq**: For parsing JSON files (`manifest.json`)
 - **bash/zsh**: Shell environment for running commands
 - **Basic Unix utilities**: `ls`, `cat`, `grep`, `mkdir`, `cd` (usually pre-installed)
 
 These tools are pre-installed on macOS and Linux systems. Windows users may need to install them separately.
+
+> [!NOTE] Installing jq
+> If `jq` is not installed on your system:
+> - **macOS**: `brew install jq`
+> - **Ubuntu/Debian**: `sudo apt-get install jq`
+> - **Windows**: Download from https://jqlang.github.io/jq/download/
 
 > [!IMPORTANT] Recommended Environment
 > For reliable verification results, use a clean macOS or Linux system in a virtual environment (such as Parallels Desktop, VirtualBox, VMware, or cloud instances). This ensures:
@@ -149,20 +156,34 @@ bun --version
 > - **Bun**: version 1.2.21  
 > Using different versions may result in build differences that prevent successful verification.
 
-### Step 5: Set Up Build Environment
+### Step 5: Obtain and Verify the Public Key
 
-Configure the environment variables required for the build:
+The public key is embedded in the manifest.json file of your beta build. You need to extract and verify it:
 
 ```bash
-# Create the required environment file for the build
-echo "EMBEDDED_PUBLIC_KEY=ed25519_public_key_here" > .env
+# Extract the public key from your beta build's manifest.json
+PUBLIC_KEY=$(jq -r '.publicKey' /path/to/your/received/manifest.json)
 
-# Note: This public key must match the one used in the original CI build
-# You can find the public key in your received build files or obtain it from the repo
+# Download the official list of valid public keys
+curl -s https://raw.githubusercontent.com/oxdc/obsidian-vertical-tabs/master/KEYS.txt > KEYS.txt
+
+# Verify the extracted public key is in the official list
+if grep -q "$PUBLIC_KEY" KEYS.txt; then
+    echo "✓ Public key verified - found in official KEYS.txt"
+else
+    echo "✗ WARNING: Public key not found in official list - build may be compromised"
+    exit 1
+fi
+
+# Create the required environment file for the build
+echo "EMBEDDED_PUBLIC_KEY=$PUBLIC_KEY" > .env
 ```
 
-> [!IMPORTANT] Public Key Requirement
-> The build process requires an embedded public key for signature verification. This key must match exactly the one used in the original CI build.
+> [!IMPORTANT] Public Key Verification
+> Always verify that the public key from your beta build matches one of the active keys listed in the official KEYS.txt file. This ensures you're working with an authentic build.
+
+> [!WARNING] Security Check
+> If the public key is not found in KEYS.txt or matches a revoked key, **do not proceed** with the verification. The build may have been tampered with or compromised.
 
 ### Step 6: Install Dependencies
 
@@ -392,25 +413,32 @@ shasum -a 256 ./dist/styles.css
 cat manifest.json | grep -A 10 "signature"
 ```
 
-### Verifying the Embedded Public Signing Key
-1. Download the official public key from the main repository
-2. Search for this key in your received beta file
-3. If found, the embedded key is authentic
-4. If not found, the file may have been tampered with
+### Verifying the Public Key from Manifest
+
+The public key is embedded in the manifest.json file. Here's how to verify it:
 
 ```bash
-# Download the official public key from repository
-curl -s https://raw.githubusercontent.com/oxdc/obsidian-vertical-tabs/master/PUBLIC_KEY.txt > official_public_key.txt
+# Extract the public key from your beta build's manifest.json
+PUBLIC_KEY=$(jq -r '.publicKey' /path/to/your/received/manifest.json)
 
-# Check if the official public key is embedded in your received beta build
-grep -f official_public_key.txt /path/to/your/received/main.js
+# Download the official list of valid public keys
+curl -s https://raw.githubusercontent.com/oxdc/obsidian-vertical-tabs/master/KEYS.txt > KEYS.txt
+
+# Check if the public key is in the official list
+if grep -q "$PUBLIC_KEY" KEYS.txt; then
+    echo "✓ Public key verified - found in official KEYS.txt"
+    
+    # Calculate and display the key fingerprint
+    echo "Key fingerprint:"
+    echo -n "$PUBLIC_KEY" | base64 -d | sha256sum
+else
+    echo "✗ WARNING: Public key not found in official list"
+    echo "This build may be compromised or using an outdated/revoked key"
+fi
 ```
 
-> [!NOTE] When to Verify the Public Key
-> This verification step is optional if your build verification already passed successfully. Perform this check when you suspect potential tampering.
-
-> [!INFO] Why Check the Embedded Public Key?
-> The plugin embeds the developer's Ed25519 public key to enable signature verification. Verifying this embedded key ensures the entire cryptographic verification system remains intact and hasn't been compromised by attackers.
+> [!WARNING] Key Validation Required
+> Always verify that the public key from your build matches an active key in KEYS.txt. Keys not found in this list should be considered suspicious and the build should not be trusted.
 
 ### Dependency Audit
 

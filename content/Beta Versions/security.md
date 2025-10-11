@@ -1,7 +1,7 @@
 ---
 title: "Security and Privacy Policy"
 ---
-**Last Updated:** September 2025
+**Last Updated:** October 2025
 **Effective Date:** August 2025
 
 This Security and Privacy Policy explains how the Vertical Tabs plugin and its Beta Program collect, use, and protect your information. This policy covers three distinct components: 1) the stable Vertical Tabs plugin, 2) the beta version of Vertical Tabs, and 3) the Beta Helper plugin.
@@ -89,6 +89,22 @@ Beta versions include security measures _not_ present in stable versions:
 - **Purpose**: Subscription and payment processing
 - **Data Shared**: Email address and subscription details
 - **Privacy**: Governed by [Ko-fi's Privacy Policy](https://more.ko-fi.com/privacy)
+
+### Resend
+- **Purpose**: Email delivery service for beta program communications
+- **Data Shared**: Email addresses of beta program subscribers
+- **Usage**: Sends access tokens and important updates to beta subscribers
+- **Privacy**: Governed by [Resend's Privacy Policy](https://resend.com/legal/privacy-policy)
+
+### Beta Program Service
+- **Domain**: `vertical-tabs-prod.oxdc.dev`
+- **Purpose**: Hosts the beta program infrastructure for access verification and beta distribution
+- **Network Usage**: The Beta Helper plugin makes requests to this domain to:
+  - Verify beta subscription status and access tokens
+  - Check for available beta updates
+  - Download authenticated beta releases
+- **Data Transmission**: All communications use HTTPS/TLS encryption
+- **Security**: Implements authentication, rate limiting, and secure build delivery
 
 ### GitHub
 - **Purpose**: Source code hosting, version checking, and beta distribution

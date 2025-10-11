@@ -34,9 +34,6 @@ A: No. Vertical Tabs remains fully open source. After beta testing, feedback col
 **Q: I'm a plugin/theme developer. Can I test beta versions without subscribing?**
 A: Yes. Please [open an issue](https://github.com/oxdc/obsidian-vertical-tabs/issues) with your request. I'll review it and provide a free access token for development purposes.
 
-**Q: I have concerns about security and privacy.**
-A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin communicates with the beta program infrastructure hosted at `vertical-tabs-prod.oxdc.dev` to verify your access token and download updates. **No personal data, vault contents, or device information is collected or transmitted. Additionally, there is absolutely no client-side telemetry or usage tracking.** Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. Email notifications are delivered via [Resend](https://resend.com). Beta builds include reproducible build verification—see [[verify build.md|Verifying Reproducible Beta Builds]] for independent verification instructions. For complete details, please review [[security|Security and Privacy Policy]].
-
 ### Usage and Licensing
 
 **Q: Can I use Vertical Tabs Beta for my team or at work?**
@@ -53,8 +50,8 @@ A: No device limit exists. However, token sharing or malicious activities (such 
 **Q: Will my access token expire?**
 A: Tokens are tied to your email and require an active subscription. If you resubscribe, your token is automatically re-enabled. Compromised tokens will be revoked and cannot be renewed.
 
-**Q: What data does the beta program collect?**
-A: For privacy reasons, Vertical Tabs Beta and [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) do not collect device information. Only your email and subscription status are tracked for access management. For complete details, please review [[security|Security and Privacy Policy]].
+**Q: I have concerns about security and privacy. What data does the beta program collect?**
+A: Security and privacy are top priorities. The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin communicates with the beta program infrastructure hosted at `vertical-tabs-prod.oxdc.dev` to verify your access token and download updates. **No personal data, vault contents, or device information is collected or transmitted. Additionally, there is absolutely no client-side telemetry or usage tracking.** Your access token is stored locally in Obsidian's plugin settings and is only used for authentication. All communications use HTTPS encryption. Email notifications are delivered via [Resend](https://resend.com). Beta builds include reproducible build verification—see [[verify build.md|Verifying Reproducible Beta Builds]] for independent verification instructions. For complete details, please review [[security|Security and Privacy Policy]].
 
 **Q: What security features are implemented in beta versions?**
 A: Beta versions include enhanced security measures _not_ present in stable versions:

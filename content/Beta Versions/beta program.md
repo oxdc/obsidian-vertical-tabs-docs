@@ -7,7 +7,7 @@ title: "Vertical Tabs Beta Program"
 
 ## Overview
 
-The Vertical Tabs Beta Program offers early access to new features, access to a private Discord community, and an opportunity to support ongoing development. As a subscriber, you'll receive beta builds before public release and help shape the future of Vertical Tabs.
+The Vertical Tabs Beta Program offers early access to new features and an opportunity to support ongoing development. As a subscriber, you'll receive beta builds before public release and help shape the future of Vertical Tabs.
 
 ## How to Join
 
@@ -59,4 +59,4 @@ You'll now automatically receive beta updates as they become available.
 
 ## Support
 
-For additional help, please contact me on [Ko-fi](https://ko-fi.com/oxdcq), Discord, or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose). For security and privacy details, see [[security|Security and Privacy Policy]].
+For additional help, please contact me on [Ko-fi](https://ko-fi.com/oxdcq) or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose). For security and privacy details, see [[security|Security and Privacy Policy]].

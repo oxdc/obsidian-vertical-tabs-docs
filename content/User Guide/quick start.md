@@ -90,7 +90,7 @@ Vertical Tabs is actively developed, with frequent bug fixes and exciting new fe
 
 2. **Follow the forum and Discord**: 
    - Visit [the forum](https://forum.obsidian.md/t/new-plugin-vertical-tabs-for-obsidian/85785) for announcements and discussions.
-   - Join [the Discord channel #updates](https://discord.com/channels/686053708261228577/855181471643861002) for real-time notifications and community support.
+   - Join [the Discord channel #updates](https://discord.com/channels/686053708261228577/855181471643861002).
 
 3. **Use Obsidian Plugin Update Tracker**:
    - Install [Obsidian Plugin Update Tracker](obsidian://show-plugin?id=obsidian-plugin-update-tracker) in your vault. This plugin will notify you when a new version of Vertical Tabs (or any other plugin) is released.

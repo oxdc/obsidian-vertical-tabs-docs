@@ -73,7 +73,7 @@ A: If you have modified the plugin's code or CSS files, a security warning will 
 ### Troubleshooting
 
 **Q: My access token isn't working. What should I do?**
-A: Check that your subscription is active and the token is correctly copied. If issues persist, contact me through [Ko-fi](https://ko-fi.com/oxdcq), Discord, or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose).
+A: Check that your subscription is active and the token is correctly copied. If issues persist, contact me through [Ko-fi](https://ko-fi.com/oxdcq) or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose).
 
 **Q: I'm not receiving beta updates. What's wrong?**
 A: Ensure the [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin is properly installed and configured with your access token. Check that your subscription is active.

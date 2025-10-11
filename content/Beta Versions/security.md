@@ -129,7 +129,6 @@ Your information may be processed in countries other than your own. We ensure ap
 We may update this policy periodically. Significant changes will be communicated through:
 - Email notification to beta subscribers
 - Updates to this document
-- Announcements in our Discord community
 
 ## Data Breach Response
 
@@ -144,9 +143,9 @@ In the unlikely event of a data breach:
 
 For privacy-related questions or concerns:
 
-- **Email**: Contact through [Ko-fi](https://ko-fi.com/oxdcq)
+- **Email**: Contact through [Email](mailto:support@oxdc.dev)
+- **Ko-fi**: Contact through [Ko-fi](https://ko-fi.com/oxdcq)
 - **GitHub**: [Open an issue](https://github.com/oxdc/obsidian-vertical-tabs/issues)
-- **Discord**: Join our community server
 
 ## Legal Basis
 

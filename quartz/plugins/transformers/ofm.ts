@@ -27,6 +27,8 @@ import { toHast } from "mdast-util-to-hast"
 import { toHtml } from "hast-util-to-html"
 import { capitalize } from "../../util/lang"
 import { PluggableList } from "unified"
+// @ts-ignore
+import tokenInputScript from "../../components/scripts/tokeninput.inline"
 
 export interface Options {
   comments: boolean
@@ -787,6 +789,13 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           inline: true,
         })
       }
+
+      js.push({
+        script: tokenInputScript,
+        loadTime: "afterDOMReady",
+        contentType: "inline",
+        moduleType: "module",
+      })
 
       return { js, css }
     },

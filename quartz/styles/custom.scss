@@ -101,3 +101,39 @@ kbd {
     }
   }
 }
+
+#token-input {
+  border: 1px var(--lightgray) solid;
+  font-family: monospace;
+  font-size: inherit;
+  height: 2rem;
+  text-align: inherit;
+  cursor: text;
+  white-space: nowrap;
+  background-color: #0000;
+  border-radius: 4px;
+  padding: 0 10px;
+  flex: 1 1 auto;
+  min-width: 0px;
+}
+
+.vt-token-input-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: no-wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+#token-link.is-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#vt-token-input-message {
+  margin-top: 2px;
+  margin-left: 4px;
+  color: var(--secondary);
+}

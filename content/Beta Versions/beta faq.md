@@ -26,6 +26,19 @@ A: The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper)
 **Q: Why is the Beta Helper plugin needed?**
 A: The [Beta Helper](https://github.com/oxdc/obsidian-vertical-tabs-beta-helper) plugin is highly recommended but not required. While you can download and install beta versions manually, the Beta Helper automates version management and provides crucial downgrade capabilities. Manual installation only supports upgrades—downgrading requires handling inconsistent settings and internal data structures. The Beta Helper solves this by automatically converting settings and creating backups when switching between versions. If you encounter issues with the latest beta, you can downgrade to any previous version with a single click, ensuring your settings and personalizations remain consistent across all installed versions.
 
+**Q: Can I download beta versions manually without the Beta Helper plugin?**
+A: Yes. To download the latest beta build manually, enter your access token in the field below and click the download button:
+
+<div class="vt-token-input-outer-container">
+    <div class="vt-token-input-container">
+        <input id="token-input">
+        <a href="https://vertical-tabs-prod.oxdc.dev/api/v1/user/builds/latest""
+        id="token-link" class="vt-install-button is-disabled" target="_blank"
+        >Download</a>
+    </div>
+    <p id="vt-token-input-message">Please paste your access token above</p>
+</div>
+
 ### Development and Open Source
 
 **Q: Does this make Vertical Tabs closed source?**

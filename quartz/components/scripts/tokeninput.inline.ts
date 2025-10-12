@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         tokenLink.href = URL
         tokenLink.classList.toggle("is-disabled", true)
-        tokenMessage.textContent = "Please enter a valid token"
+        if (token.length > 0) {
+          tokenMessage.textContent = "Please enter a valid token"
+        } else {
+          tokenMessage.textContent = "Please paste your access token above"
+        }
       }
     }
 

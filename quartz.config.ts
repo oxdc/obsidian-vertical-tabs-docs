@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       websiteId: "d902c449-933b-4539-b6e3-1ae67701e646",
     },
     locale: "en-US",
-    baseUrl: "oxdc.github.io/obsidian-vertical-tabs-docs",
+    baseUrl: "vertical-tabs-docs.oxdc.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "published",
     generateSocialImages: true,

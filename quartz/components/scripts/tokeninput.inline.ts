@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const URL = "https://vertical-tabs-prod.oxdc.dev/api/v1/user/builds/latest"
 
   if (tokenInput && tokenLink && tokenMessage) {
+    let debounceTimer: number
+
     const updateLink = async () => {
       const token = tokenInput.value.replace(/-/g, "").toUpperCase().trim()
       const isTokenValid = token.length === 16
@@ -34,7 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    tokenInput.addEventListener("input", updateLink)
+    const debouncedUpdateLink = () => {
+      clearTimeout(debounceTimer)
+      debounceTimer = window.setTimeout(updateLink, 500)
+    }
+
+    tokenInput.addEventListener("input", debouncedUpdateLink)
     updateLink() // Initialize on load
   }
 })

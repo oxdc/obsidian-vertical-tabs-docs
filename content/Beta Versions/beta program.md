@@ -2,9 +2,6 @@
 title: "Vertical Tabs Beta Program"
 ---
 
-> [!WARNING] Notice
-> The Vertical Tabs Beta Program has not been announced. Please do not subscribe yet.
-
 ## Overview
 
 The Vertical Tabs Beta Program offers early access to new features and an opportunity to support ongoing development. As a subscriber, you'll receive beta builds before public release and help shape the future of Vertical Tabs.

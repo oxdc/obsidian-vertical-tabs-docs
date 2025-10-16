@@ -1,6 +1,9 @@
 ---
 title: "Terms and Conditions"
 ---
+**Last Updated:** October 2025
+**Effective Date:** August 2025
+
 By subscribing to and using the Vertical Tabs Beta Program, you agree to the following terms:
 
 ### Access Token Restrictions
@@ -33,7 +36,7 @@ You are **strictly prohibited** from:
 - **Full Compliance**: You must follow all guidelines, restrictions, and policies outlined in this documentation
 
 ### Service Terms
-- **No Refunds**: Token revocations for policy violations will **not** result in subscription refunds under any circumstances
+- **No Refunds**: All subscriptions are final and non-refundable under any circumstances, including but not limited to policy violations, token revocations, service discontinuation, or dissatisfaction with the service
 - **No Prior Notice**: We reserve the right to revoke tokens immediately without warning for any policy violations
 - **Service Modifications**: We may modify these terms, add restrictions, change features, or discontinue the beta program with reasonable advance notice
 - **Best-Effort Support**: Support is provided on a best-effort basis through official channels only

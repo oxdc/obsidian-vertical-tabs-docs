@@ -1,7 +1,7 @@
 ---
 title: Feature Tour
 ---
-> [!NOTE] In case you missed it...
+> [!TIP] In case you missed it...
 > The latest beta introduces **Scrollable Tabs** (smarter horizontal tabs that auto-center as you work) and a **redesigned Mission Control View** (visual tab management with drag-and-drop support). These features are currently available through the [[beta faq|Beta Program]]. Click [here](https://ko-fi.com/oxdcq) to subscribe.
 >
 > **Subscription ($1.99/m) is only required to download beta versions. Once installed, you may use it as long as you want.**

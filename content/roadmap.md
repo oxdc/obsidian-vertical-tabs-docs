@@ -5,6 +5,10 @@ title: Roadmap
 ---
 ## 🚧 Active
 
+- [Tab Group Commands](https://forum.obsidian.md/t/add-commands-to-move-the-current-tab-group-right-left-above-below/59843)
+  - Commands to rearrange tab groups, such as "move the current tab group right, left, above, or below".
+- [Chrome-like Tab Groups](https://forum.obsidian.md/t/tabs-of-tab-groups/53162/17)
+  - Visual tab grouping with colored headers and collapsible sections, similar to Chrome's tab group feature.
 - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
   - Public API and events for integrations with other plugins.
 

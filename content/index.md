@@ -4,6 +4,13 @@ title: Vertical Tabs for Obsidian
 > [!WARNING] Notice
 > 🚧 Hey there! The docs are still a work in progress, so you might find some gaps here and there. If you have questions or run into any issues, feel free to drop by the [Discussion Page](https://github.com/oxdc/obsidian-vertical-tabs/discussions) – I'd love to help out and hear your feedback!
 
+> [!NOTE] In case you missed ...
+> The latest beta introduces **Scrollable Tabs** (smarter horizontal tabs that auto-center as you work) and a **redesigned Mission Control View** (visual tab management with drag-and-drop support). These features are currently available through the [[beta faq|Beta Program]]. Click [here](https://ko-fi.com/oxdcq) to subscribe.
+>
+> **Subscription ($1.99/m) is only required to download beta versions. Once installed, you may use it as long as you want.**
+> 
+> <video src="https://github.com/user-attachments/assets/caf6bc43-2ed9-4cb8-887d-a205b2f5fe6a" width="500">
+
 ## Getting Started
 
 To install and get started with Vertical Tabs, you can take a quick look at the [[feature tour|Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[quick start|Quick Start]] guide is a good start point.

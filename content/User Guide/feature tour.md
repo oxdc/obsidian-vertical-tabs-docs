@@ -1,6 +1,13 @@
 ---
 title: Feature Tour
 ---
+> [!NOTE] In case you missed ...
+> The latest beta introduces **Scrollable Tabs** (smarter horizontal tabs that auto-center as you work) and a **redesigned Mission Control View** (visual tab management with drag-and-drop support). These features are currently available through the [[beta faq|Beta Program]]. Click [here](https://ko-fi.com/oxdcq) to subscribe.
+>
+> **Subscription ($1.99/m) is only required to download beta versions. Once installed, you may use it as long as you want.**
+> 
+> <video src="https://github.com/user-attachments/assets/caf6bc43-2ed9-4cb8-887d-a205b2f5fe6a" width="500">
+
 ## Vertical Tabs
 
 This plugin displays open tabs in a vertical list for easier navigation. By default, Vertical Tabs will [[name wrapping|wrap tab titles]] so you can see the full file name. You can also choose to [[name trimming|trim names]] in the [[settings]].

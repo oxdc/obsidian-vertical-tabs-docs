@@ -15,6 +15,9 @@ title: Vertical Tabs for Obsidian
 
 To install and get started with Vertical Tabs, you can take a quick look at the [[feature tour|Feature Tour]] to get a glimpse of all the features. If you want to jump right in and start using Vertical Tabs, the [[quick start|Quick Start]] guide is a good start point.
 
+> [!TIP] What's Coming Next?
+> Interested in upcoming features and development plans? Check out the [[roadmap|Roadmap]] to see what's in active development, coming soon, and what's already been shipped.
+
 ## Key Benefits
 
 Productive users of Obsidian often find themselves juggling a large number of open notes, and the default horizontal tab layout can make it challenging to locate and switch between them. As more notes are opened, tabs become narrower, making titles harder to read. This can lead to decreased productivity and increased frustration.

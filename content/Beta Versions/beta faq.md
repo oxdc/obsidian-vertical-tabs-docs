@@ -32,7 +32,7 @@ A: Yes. To download the latest beta build manually, enter your access token in t
 <div class="vt-token-input-outer-container">
     <div class="vt-token-input-container">
         <input id="token-input">
-        <a href="https://vertical-tabs-prod.oxdc.dev/api/v1/user/builds/latest""
+        <a href="https://vertical-tabs-prod.oxdc.dev/api/v1/user/builds/latest"
         id="token-link" class="vt-install-button is-disabled" target="_blank"
         >Download</a>
     </div>

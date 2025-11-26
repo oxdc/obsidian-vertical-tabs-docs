@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       Home: "https://vertical-tabs-docs.oxdc.dev",
+      Status: "https://status.oxdc.dev",
       GitHub: "https://github.com/oxdc/obsidian-vertical-tabs",
       "Obsidian Forum": "https://forum.obsidian.md/t/new-plugin-vertical-tabs-for-obsidian/85785",
       Donate: "https://ko-fi.com/oxdcq",

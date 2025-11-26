@@ -82,6 +82,9 @@ A: If you have modified the plugin's code or CSS files, a security warning will 
 
 ### Troubleshooting
 
+**Q: Is the Beta Program server down?**
+A: Check the [status page](https://status.oxdc.dev) to see if the Beta Program server is experiencing any issues. If it is, please wait for it to come back online and try again. If the status page shows no issues, please contact me through [Ko-fi](https://ko-fi.com/oxdcq) or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose).
+
 **Q: My access token isn't working. What should I do?**
 A: Check that your subscription is active and the token is correctly copied. If issues persist, contact me through [Ko-fi](https://ko-fi.com/oxdcq) or [GitHub](https://github.com/oxdc/obsidian-vertical-tabs/issues/new/choose).
 

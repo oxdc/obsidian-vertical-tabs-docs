@@ -5,10 +5,13 @@ title: Roadmap
 ---
 ## 🚧 Active
 
-> [!INFO] Will be released in version 0.18.1-beta and is expected to be available to subscribers in **January 2026**.
+> [!INFO] Will be released in version 0.19.0 and is expected to be available to subscribers in **January 2026**.
 >
 > - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
 >   - Public API and events for integrations with other plugins.
+
+> [!INFO] Will be released in version 0.20.0 and is expected to be available to subscribers in **February 2026**.
+>
 > - [Tab Group Commands](https://forum.obsidian.md/t/add-commands-to-move-the-current-tab-group-right-left-above-below/59843)
 >   - Commands to rearrange tab groups, such as "move the current tab group right, left, above, or below".
 > - [Chrome-like Tab Groups](https://forum.obsidian.md/t/tabs-of-tab-groups/53162/17)
@@ -16,6 +19,10 @@ title: Roadmap
 
 ## ✨ Coming Soon in Beta
 
+> [!INFO] Will be released in version 0.19.0 and is expected to be available to subscribers in **January 2026**.
+>
+> - [Tab Sorting in the Background](https://github.com/oxdc/obsidian-vertical-tabs/issues/170)
+>   - Sort tabs in Background Mode without requiring the Vertical Tabs UI.
 
 ## 📌 Planned
 

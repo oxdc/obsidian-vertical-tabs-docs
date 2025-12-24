@@ -5,12 +5,12 @@ title: Roadmap
 ---
 ## 🚧 Active
 
-> [!INFO] Will be released in version 0.19.0 and is expected to be available to subscribers in **January 2026**.
+>[!INFO] Will be released in version 0.19.1 and is expected to be available to subscribers in **January 2026**.
 >
 > - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
 >   - Public API and events for integrations with other plugins.
 
-> [!INFO] Will be released in version 0.20.0 and is expected to be available to subscribers in **February 2026**.
+>[!INFO] Will be released in version 0.20.0 and is expected to be available to subscribers in **February 2026**.
 >
 > - [Tab Group Commands](https://forum.obsidian.md/t/add-commands-to-move-the-current-tab-group-right-left-above-below/59843)
 >   - Commands to rearrange tab groups, such as "move the current tab group right, left, above, or below".
@@ -19,19 +19,20 @@ title: Roadmap
 
 ## ✨ Coming Soon in Beta
 
-> [!INFO] Will be released in version 0.19.0 and is expected to be available to subscribers in **January 2026**.
->
-> - [Tab Sorting in the Background](https://github.com/oxdc/obsidian-vertical-tabs/issues/170)
->   - Sort tabs in Background Mode without requiring the Vertical Tabs UI.
 
 ## 📌 Planned
 
 
 ## 🧪 Shipped in Beta
 
->[!INFO] Released in version 0.18.0-beta. Publicly available in **September 2026**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>[!INFO] Released in version 0.19.0-beta. Publicly available in **October 2026**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
 >
 > *A subscription is needed only for downloading; enjoy unlimited use after installation.*
+>
+> - [Tab Sorting in the Background](https://github.com/oxdc/obsidian-vertical-tabs/issues/170)
+>   - Sort tabs in Background Mode without requiring the Vertical Tabs UI.
+
+>[!INFO] Released in version 0.18.0-beta. Publicly available in **September 2026**.
 >
 > - [Customization](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
 >   - Customize tabs and groups with colors, icons, and titles.

@@ -34,6 +34,8 @@ this.registerEvent(
 );
 ```
 
+**Important:** For robust integration that handles load and unload correctly, see [[safe-access|Safe API Access]].
+
 ## Metadata changes
 
 Fired when tab or group metadata is changed through the API:

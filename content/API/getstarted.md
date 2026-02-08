@@ -5,6 +5,13 @@ title: Getting Started
 
 The Vertical Tabs API allows other Obsidian plugins to interact with and customize tabs and groups programmatically. You can set custom icons, colors, and titles for tabs and groups, listen to workspace events, and add custom menu items to context menus.
 
+> [!WARNING] Notice
+> The Vertical Tabs API is currently in beta and requires a subscription to the [[beta-program|Beta Program]].
+>
+> **Plugin developers:** If you want to use the API and integrate your plugin with Vertical Tabs, please complete [this form](https://github.com/oxdc/obsidian-vertical-tabs/issues/new?template=developer_beta_request.yml) to request **free access**.
+>
+> **Users:** If you want to try out the API features, please subscribe to the [[beta-program|Beta Program]]. All users will receive a free update at a later date. For more information, please refer to the [[beta-program|Beta Program documentation]] and the [[roadmap|Roadmap]].
+
 ## Installation
 
 Install the API types in your plugin project:

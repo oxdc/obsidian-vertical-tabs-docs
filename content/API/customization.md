@@ -9,12 +9,31 @@ The API allows you to customize tabs and groups with custom icons, colors, and t
 
 ### Setting tab icon
 
-Set a custom icon for a tab using Lucide icon names:
+Set a custom icon for a tab. You can use built-in Lucide icon names or register custom icons:
+
+#### Using built-in icons
 
 ```typescript
 const leaf = api.getActiveLeaf();
 if (leaf) {
   await api.setTabIcon(leaf.id, "star", "my-plugin");
+}
+```
+
+#### Using custom icons
+
+To use a custom icon, first register it with Obsidian using `addIcon`, then reference it by its ID:
+
+```typescript
+import { addIcon } from "obsidian";
+
+// Register a custom icon (do this once during plugin load)
+addIcon("my-custom-icon", '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40"/></svg>');
+
+// Use the custom icon on a tab
+const leaf = api.getActiveLeaf();
+if (leaf) {
+  await api.setTabIcon(leaf.id, "my-custom-icon", "my-plugin");
 }
 ```
 
@@ -98,6 +117,20 @@ await api.setTabIcon(leaf.id, "star", "my-plugin");
 
 Always provide a source parameter when making changes in response to events to prevent infinite loops.
 
-## Icon names
+## Icon reference
 
-See the [Lucide icon library](https://lucide.dev/icons/) for the complete list of available icons.
+### Built-in icons
+
+See the [Lucide icon library](https://lucide.dev/icons/) for the complete list of available built-in icons.
+
+### Custom icons
+
+To register custom SVG icons with Obsidian:
+
+```typescript
+import { addIcon } from "obsidian";
+
+addIcon("icon-id", '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><!-- SVG content --></svg>');
+```
+
+The icon ID must be unique. Once registered, custom icons can be used with `setTabIcon` and `setGroupIcon` just like built-in icons.

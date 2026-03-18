@@ -176,6 +176,49 @@ api.onTabMenu((menu, leaf) => {
 
 This pattern works for both tab and group menus. The same approach applies to `onGroupMenu()` callbacks.
 
+## Identifying Vertical Tabs menus
+
+> [!VERSION]
+> **Available since:** 1.0.1
+
+Use `isVTMenu()` to check whether a menu was created by Vertical Tabs. This is intended for plugins that monkey-patch `Menu.showAtPosition` to intercept all menus. It lets you identify which menus originated from Vertical Tabs:
+
+```typescript
+const original = Menu.prototype.showAtPosition;
+Menu.prototype.showAtPosition = function (position) {
+  if (api.isVTMenu(this)) {
+    // This menu was created by Vertical Tabs
+  }
+  return original.call(this, position);
+};
+```
+
+When `isVTMenu()` returns `true`, the menu's `VTMenuAttribute` property identifies which specific menu was opened:
+
+| `VTMenuAttribute`       | Description                                  |
+| ----------------------- | -------------------------------------------- |
+| `"vt-tab-menu"`         | Tab context menu                             |
+| `"vt-group-menu"`       | Group context menu                           |
+| `"vt-sort-menu"`        | Sort menu in the navigation header           |
+| `"vt-tab-switcher-menu"`| Tab switcher menu                            |
+| `"vt-status-bar-menu"`  | Zen mode status bar menu                     |
+| `"vt-nav-history-menu"` | Navigation history menu (back/forward)       |
+
+```typescript
+const original = Menu.prototype.showAtPosition;
+Menu.prototype.showAtPosition = function (position) {
+  if (api.isVTMenu(this)) {
+    const attr = this.VTMenuAttribute;
+    if (attr === "vt-tab-menu") {
+      // Tab context menu
+    } else if (attr === "vt-group-menu") {
+      // Group context menu
+    }
+  }
+  return original.call(this, position);
+};
+```
+
 ## Common patterns
 
 ### Conditional menu items

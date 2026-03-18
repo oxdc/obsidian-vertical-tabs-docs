@@ -179,7 +179,7 @@ This pattern works for both tab and group menus. The same approach applies to `o
 ## Identifying Vertical Tabs menus
 
 > [!VERSION]
-> **Available since:** 1.0.1
+> **Available since:** API v1.0.1, Vertical Tabs v0.21.0
 
 Use `isVTMenu()` to check whether a menu was created by Vertical Tabs. This is intended for plugins that monkey-patch `Menu.showAtPosition` to intercept all menus. It lets you identify which menus originated from Vertical Tabs:
 

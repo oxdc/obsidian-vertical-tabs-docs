@@ -5,12 +5,7 @@ title: Roadmap
 ---
 ## 🚧 Active
 
->[!INFO] Will be released in version 0.19.1 and is expected to be available to subscribers in **January 2026**.
->
-> - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
->   - Public API and events for integrations with other plugins.
-
->[!INFO] Will be released in version 0.20.0 and is expected to be available to subscribers in **February 2026**.
+>[!INFO] Will be released in version 0.22.0 and is expected to be available to subscribers in **April 2026**.
 >
 > - [Tab Group Commands](https://forum.obsidian.md/t/add-commands-to-move-the-current-tab-group-right-left-above-below/59843)
 >   - Commands to rearrange tab groups, such as "move the current tab group right, left, above, or below".
@@ -19,13 +14,27 @@ title: Roadmap
 
 ## ✨ Coming Soon in Beta
 
+>[!INFO] Will be released in version 0.21.0 soon.
+>
+> - Enhanced Tab Group Switcher
+>   - Dropdown menu in tab headers for quick navigation between groups and tabs.
+> - Status Bar Indicator
+>   - Status bar item displaying the current tab group with its icon and name; click to open the group switcher.
+> - Equal Split Distribution
+>   - Double-click resize handles to evenly distribute split dimensions among sibling panes.
+> - Split Direction Commands
+>   - Commands to toggle the active split's direction between horizontal and vertical layouts.
 
 ## 📌 Planned
 
 
 ## 🧪 Shipped in Beta
 
->[!INFO] Released in version 0.19.0-beta. Publicly available in **October 2026**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>[!INFO]  Released in version 0.20.0-beta. Publicly available in **November 2026**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+> - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
+>   - Public API and events for integrations with other plugins.
+
+>[!INFO] Released in version 0.19.0-beta. Publicly available in **October 2026**.
 >
 > *A subscription is needed only for downloading; enjoy unlimited use after installation.*
 >

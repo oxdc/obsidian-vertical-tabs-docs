@@ -55,6 +55,21 @@ Override the tab's display title:
 await api.setTabTitle(leaf.id, "Custom Title", "my-plugin");
 ```
 
+### Setting ephemeral status
+
+> [!VERSION]
+> **Available since:** API v1.1.0, Vertical Tabs v0.22.0
+
+Set whether a tab should be ephemeral. [[ephemeral tabs|Ephemeral tabs]] are automatically closed when they become inactive and another tab is opened, similar to preview tabs in VSCode:
+
+```typescript
+// Make a tab ephemeral
+await api.setTabEphemeral(leaf.id, true, "my-plugin");
+
+// Make a tab non-ephemeral
+await api.setTabEphemeral(leaf.id, false, "my-plugin");
+```
+
 ### Getting tab metadata
 
 Retrieve current metadata for a tab:
@@ -65,6 +80,7 @@ if (metadata) {
   console.log("Icon:", metadata.icon);
   console.log("Color:", metadata.color);
   console.log("Title:", metadata.title);
+  console.log("Ephemeral:", metadata.isEphemeral);
 }
 ```
 

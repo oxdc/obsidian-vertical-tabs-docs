@@ -111,6 +111,89 @@ const metadata = await api.getGroupMetadata(group.id);
 await api.clearGroupMetadata(group.id, "my-plugin");
 ```
 
+### Setting group view type
+
+> [!VERSION]
+> **Available since:** API v1.2.0, Vertical Tabs v0.24.0
+
+Set how tabs are displayed within a group using one of the four view types:
+
+```typescript
+import { GroupViewType } from "obsidian-vertical-tabs-api";
+
+const group = api.getActiveGroup();
+if (group) {
+  // Standard stacked/tab view (default)
+  await api.setGroupViewType(group.id, GroupViewType.Default, "my-plugin");
+
+  // All tab contents in a continuous scroll
+  await api.setGroupViewType(group.id, GroupViewType.ContinuousView, "my-plugin");
+
+  // Tabs displayed side-by-side
+  await api.setGroupViewType(group.id, GroupViewType.ColumnView, "my-plugin");
+
+  // Fullscreen thumbnail grid of all tabs
+  await api.setGroupViewType(group.id, GroupViewType.MissionControlView, "my-plugin");
+}
+```
+
+The view type is persisted to the database and restored when Obsidian restarts. The current `viewType` is also available in `getGroupMetadata`:
+
+```typescript
+const metadata = await api.getGroupMetadata(group.id);
+console.log("View type:", metadata?.viewType);
+```
+
+### Setting group hidden state
+
+> [!VERSION]
+> **Available since:** API v1.2.0, Vertical Tabs v0.24.0
+
+Hide or show a group in the workspace. Hidden groups remain open with all their tabs intact but are not visible. The hidden state is persisted.
+
+```typescript
+const group = api.getActiveGroup();
+if (group) {
+  // Hide the group
+  await api.setGroupHidden(group.id, true, "my-plugin");
+
+  // Show the group again
+  await api.setGroupHidden(group.id, false, "my-plugin");
+}
+```
+
+Check the current hidden state via `getGroupMetadata`:
+
+```typescript
+const metadata = await api.getGroupMetadata(group.id);
+console.log("Hidden:", metadata?.isHidden);
+```
+
+### Setting group collapsed state
+
+> [!VERSION]
+> **Available since:** API v1.2.0, Vertical Tabs v0.24.0
+
+Collapse or expand a group in the Vertical Tabs sidebar. A collapsed group shows only its header row, hiding the tab list. The tabs remain open. The collapsed state is persisted.
+
+```typescript
+const group = api.getActiveGroup();
+if (group) {
+  // Collapse the group in the sidebar
+  await api.setGroupCollapsed(group.id, true, "my-plugin");
+
+  // Expand the group
+  await api.setGroupCollapsed(group.id, false, "my-plugin");
+}
+```
+
+Check the current collapsed state via `getGroupMetadata`:
+
+```typescript
+const metadata = await api.getGroupMetadata(group.id);
+console.log("Collapsed:", metadata?.isCollapsed);
+```
+
 ## Source parameter
 
 The optional `source` parameter identifies which plugin made the change. This is important for preventing infinite loops when listening to [[events#Metadata changes|metadata change events]]:

@@ -5,6 +5,8 @@ title: Safe API Access
 
 The Vertical Tabs plugin can be loaded and unloaded at any time due to user interactions or updates. This guide shows you how to safely access the API and keep your integration robust.
 
+For a single console or script invocation, you can use the global [[withVT|withVT]] helper instead of managing load/unload listeners yourself.
+
 ## The problem
 
 Plugin lifecycle events mean:

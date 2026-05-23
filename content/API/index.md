@@ -19,6 +19,7 @@ Start with the [[getstarted|Getting Started]] guide to learn how to access and u
 ## Documentation
 
 - [[getstarted|Getting Started]] - Installation and basic usage
+- [[withVT|Global withVT helper]] - One-off access from the console and scripts
 - [[safe-access|Safe API Access]] - Robust patterns for accessing the API
 - [[customization|Customization]] - Customize tabs and groups
 - [[events|Events]] - Subscribe to workspace events

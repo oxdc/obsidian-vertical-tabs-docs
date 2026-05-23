@@ -53,6 +53,8 @@ The Vertical Tabs plugin can be loaded and unloaded at any time. Always access t
 
 For a complete guide on safe API access patterns, see [[safe-access|Safe API Access]].
 
+For one-off use from the developer console or user scripts, see [[withVT|Global withVT helper]].
+
 **Quick check:**
 
 ```typescript

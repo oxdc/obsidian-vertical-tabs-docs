@@ -18,11 +18,40 @@ title: Roadmap
 
 ## 🧪 Shipped in Beta
 
->[!INFO] Released in version 0.25.0-beta. Publicly available in **July 2027**.
+>[!INFO] Released in version 0.25.0-beta. Publicly available in **July 2027**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>
+> - Panorama View
+>   - Alt/Option+click the Mission Control toggle to see all tabs and groups at once.
+> - Flatten workspace
+>   - Commands for collapsing nested splits into a single level.
+> - Tab search modal
+>   - A dedicated modal for searching, filtering, and jumping to tabs.
 
 >[!INFO] Released in version 0.24.0-beta. Publicly available in **June 2027**.
+>
+> - [Auto-reveal active tab](https://github.com/oxdc/obsidian-vertical-tabs/issues/145)
+>   - Setting to automatically scroll the active tab into view in Vertical Tabs when switching tabs.
+> - [Frontmatter titles](https://github.com/oxdc/obsidian-vertical-tabs/issues/209)
+>   - Option to use frontmatter properties as tab titles instead of file basenames.
+> - Tab search bar
+>   - Search bar in the Vertical Tabs view for fast tab filtering.
+> - [Persistent group view and linked folder](https://github.com/oxdc/obsidian-vertical-tabs/issues/123)
+>   - Persist group view customization and linked folder assignments after restart.
 
 >[!INFO] Released in version 0.23.0-beta. Publicly available in **May 2027**.
+>
+> - [Group visibility commands](https://github.com/oxdc/obsidian-vertical-tabs/issues/132)
+>   - commands let you unhide all groups, hide all groups except the active one, and quickly switch to the next or previous group.
+> - [Close editor group commands](https://github.com/oxdc/obsidian-vertical-tabs/issues/126)
+>   - VS Code-style commands to close the current split pane and merge its tabs with another group.
+> - [Linked folder commands](https://github.com/oxdc/obsidian-vertical-tabs/issues/132)
+>   - Commands to load more files within a linked folder group and to unlink groups as needed.
+> - [Tab control commands](https://github.com/oxdc/obsidian-vertical-tabs/issues/151)
+>   - Commands to keep the active ephemeral tab open. Related commands for ephemeral tabs and deduplication now have improved availability checks.
+> - New note creation shortcut
+>   - Hold Alt/Option while clicking the new-tab button to instantly create a new note in a new tab, instead of opening an empty tab.
+> - [Double-clicking to toggle Zen Mode](https://github.com/oxdc/obsidian-vertical-tabs/issues/203)
+>   - Double-clicking a tab header promotes ephemeral tabs to regular ones; for normal tabs, it toggles Zen Mode.
 
 >[!INFO] Released in version 0.22.0-beta. Publicly available in **March 2027**.
 >
@@ -40,7 +69,7 @@ title: Roadmap
 > - Split Direction Commands
 >   - Commands to toggle the active split's direction between horizontal and vertical layouts.
 
->[!INFO] Released in version 0.20.0-beta. Publicly available in **November 2026**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>[!INFO] Released in version 0.20.0-beta. Publicly available in **November 2026**.
 > - [API & Integration](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
 >   - Public API and events for integrations with other plugins.
 

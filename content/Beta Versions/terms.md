@@ -1,10 +1,14 @@
 ---
 title: "Terms and Conditions"
 ---
-**Last Updated:** October 2025
+**Last Updated:** September 2026
 **Effective Date:** August 2025
 
 By subscribing to and using the Vertical Tabs Beta Program, you agree to the following terms:
+
+### Definitions
+- **Beta builds**: The JavaScript and CSS files distributed as beta releases of this plugin
+- **Public releases**: The JavaScript and CSS files published for download on GitHub and in Obsidian's Community Plugins directory
 
 ### Access Token Restrictions
 - **Confidentiality**: You are solely responsible for maintaining the confidentiality of your access token
@@ -13,6 +17,11 @@ By subscribing to and using the Vertical Tabs Beta Program, you agree to the fol
 - **Immediate Revocation**: Tokens that are shared, leaked, compromised, or used for unauthorized purposes will be revoked immediately **without prior notification or refund**
 
 ### Beta Build Restrictions
+These restrictions remain in effect until the corresponding version is publicly released, and apply to:
+- The beta build files themselves
+- Any material, code, or other work that could be used to reproduce, in whole or in part, the functionalities or structures of the beta builds, or to produce anything similar to them
+- Anything that can be produced or deduced from the beta builds
+
 You are **strictly prohibited** from:
 - **Redistributing**: Sharing, distributing, uploading, or making beta builds available to anyone else through any means (including file sharing services, repositories, or direct transfer)
 - **Rebranding**: Removing, modifying, or replacing the plugin's name, branding, logos, or attribution

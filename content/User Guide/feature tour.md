@@ -32,7 +32,7 @@ To make full use of [[tab group|tab groups]], you can click the edit button (<im
 
 ![[vertical_tabs.png|600]]
 
-The golden rule is to “**keep it simple**.” You can group your tabs based on projects, responsibility scopes (e.g., personal, work), categories (e.g., tabs to review, reference tabs), status (e.g., to-do tabs, completed tabs), or purpose (e.g., reading, research). If no clear structure emerges, keep all your tabs in a single group. Don’t overcomplicate it—if the number of groups is small, renaming them isn’t necessary as long as you can find what you need. Avoid trying to replicate your folder structure.
+The golden rule is to “**keep it simple**.” You can group your tabs based on projects, responsibility scopes (e.g., personal, work), categories (e.g., tabs to review, reference tabs), status (e.g., to-do tabs, completed tabs), or purpose (e.g., reading, research). If no clear structure emerges, keep all your tabs in a single group. Don’t overcomplicate it. If the number of groups is small, renaming them isn’t necessary as long as you can find what you need. Avoid trying to replicate your folder structure.
 
 For each [[tab group]], you can switch between different [[group views]]: [[default view]] displays only one tab at a time; [[continuous view]] allows you to edit multiple tabs as a continuous document; [[column view]] displays tabs side by side; and [[Mission Control view]] previews all tabs at once, making it easy to find what you need.
 
@@ -54,7 +54,7 @@ If your vertical list grows too long, click the folding button (<img src="/Attac
 
 ## Easily navigate
 
-By default, Obsidian allows you to zoom in or out on the entire UI using <kbd>Ctrl</kbd> + <kbd>+/-</kbd> (Windows) or <kbd>Command</kbd> + <kbd>+/-</kbd> (macOS). If you need finer control—allowing each tab to have a different zoom level without affecting other parts of the UI—you can enable [[per-tab zooming]] in the [[settings]]. This is particularly useful when working with notes that contain wide tables or images, especially on smaller laptop screens.
+By default, Obsidian allows you to zoom in or out on the entire UI using <kbd>Ctrl</kbd> + <kbd>+/-</kbd> (Windows) or <kbd>Command</kbd> + <kbd>+/-</kbd> (macOS). If you need finer control (allowing each tab to have a different zoom level without affecting other parts of the UI), you can enable [[per-tab zooming]] in the [[settings]]. This is particularly useful when working with notes that contain wide tables or images, especially on smaller laptop screens.
 
 Obsidian provides navigation buttons (<img src="/Attachments/lucide-arrow-left.svg" data-type="icon" />/<img src="/Attachments/lucide-arrow-right.svg" data-type="icon" />) to move backward or forward between notes. However, Vertical Tabs extends this functionality. By right-clicking a vertical tab, you gain access to the full [[tab history]] through the context menu, allowing you to navigate, browse, bookmark, or clear the history. You can even open the tab history as a new [[tab group]].
 
@@ -68,7 +68,7 @@ Vertical Tabs introduces the [[enhanced keyboard tab switcher]], adding two addi
 
 ## Take Control of Your Tab Management
 
-By default, Obsidian behaves like a web browser—clicking a link or opening a new note replaces the content in the current tab, and reopening a note results in multiple duplicate tabs. While this approach has its benefits, it doesn’t feel like working with a physical notebook or a fully-featured editor like VSCode.
+By default, Obsidian behaves like a web browser: clicking a link or opening a new note replaces the content in the current tab, and reopening a note results in multiple duplicate tabs. While this approach has its benefits, it doesn’t feel like working with a physical notebook or a fully-featured editor like VSCode.
 
 In Vertical Tabs, tab behavior is managed by the [[navigation strategy]], which determines how and where new notes open. If Obsidian’s [[default strategy]] doesn’t suit your workflow, Vertical Tabs offers [[advanced tab navigation]] with [[advanced tab navigation|five presets]]. You can also [[custom strategy|create a custom navigation strategy]] to fine-tune tab behavior according to your preferences.
 

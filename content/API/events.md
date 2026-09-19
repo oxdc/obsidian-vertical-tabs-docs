@@ -3,7 +3,7 @@ title: Events
 ---
 ## Overview
 
-The Vertical Tabs plugin emits several workspace events that your plugin can listen to. These events notify you of plugin lifecycle changes, metadata updates, and workspace refresh operations.
+The Vertical Tabs plugin emits several workspace events that your plugin can listen to. These events notify you of plugin lifecycle changes, metadata updates, workspace refresh operations, and icon rendering.
 
 ## Plugin lifecycle
 
@@ -133,6 +133,33 @@ this.registerEvent(
   })
 );
 ```
+
+## Icon rendering
+
+> [!VERSION]
+> **Available since:** API v1.3.0, Vertical Tabs v0.26.3
+
+Fired after Vertical Tabs paints a sidebar icon slot, so another plugin can mutate the DOM. These events are not part of `VerticalTabsAPI`. See [[icons|Icon Rendering]] for the full guide.
+
+```typescript
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:render-tab-icon", (leaf, iconEl, tabEl) => {
+    // Paint iconEl for this leaf
+  })
+);
+
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:render-group-icon", (group, iconEl, groupEl) => {
+    // Paint iconEl for this group
+  })
+);
+
+this.app.workspace.trigger("vertical-tabs:request-icon-refresh");
+```
+
+`vertical-tabs:request-icon-refresh` asks Vertical Tabs to re-paint every visible tab and group icon. Trigger it after you register listeners (if Vertical Tabs may already be running) and whenever your icon data changes.
+
+If Vertical Tabs is not installed or not enabled, these events will not be available; no one will emit or respond to them.
 
 ## Event registration
 

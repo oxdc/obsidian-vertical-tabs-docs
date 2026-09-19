@@ -83,6 +83,7 @@ export default class MyPlugin extends Plugin {
 
 - [[safe-access|Safe API Access]] - Learn robust patterns for accessing the API
 - [[customization|Customization]] - Learn how to customize tabs and groups
+- [[icons|Icon Rendering]] - Paint tab and group icons directly
 - [[events|Events]] - Subscribe to workspace events
 - [[menus|Menus]] - Add custom menu items
 - [[utilities|Utilities]] - Utility methods for working with tabs and groups

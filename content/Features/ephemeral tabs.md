@@ -5,17 +5,17 @@ title: Ephemeral Tabs
 
 Ephemeral tabs are a powerful feature in Vertical Tabs that allow you to quickly browse through multiple notes without cluttering your workspace with too many tabs. They're designed for efficient exploration and work similarly to VSCode.
 
-Ephemeral tabs are visually distinct — they appear with *italicized titles* in your tab list, making them easy to identify at a glance.
+Ephemeral tabs are visually distinct: they appear with *italicized titles* in your tab list, making them easy to identify at a glance.
 
 ## How ephemeral tabs work?
 
 At its core, ephemeral tabs implement a dynamic navigation modifier that helps maintain a clean workspace. For enthusiastic users, you may refer to the guide of [[advanced tab navigation]] for details on the implementation.
 
-When you open a new note while an ephemeral tab is active, the new content replaces the ephemeral tab's content instead of creating a new tab. This behavior is consistent regardless of how you open the note — whether by clicking a link, using the file browser, or through a plugin. 
+When you open a new note while an ephemeral tab is active, the new content replaces the ephemeral tab's content instead of creating a new tab. This behavior is consistent regardless of how you open the note, whether by clicking a link, using the file browser, or through a plugin. 
 
-Previous content that gets replaced isn't lost — it's automatically added to the ephemeral tab's history, allowing you to navigate back if needed. Each tab group can have at most one ephemeral tab at any time, which helps maintain a balanced workspace layout.
+Previous content that gets replaced isn't lost. It's automatically added to the ephemeral tab's history, allowing you to navigate back if needed. Each tab group can have at most one ephemeral tab at any time, which helps maintain a balanced workspace layout.
 
-Non-ephemeral tabs function similarly to pinned tabs. Their content won't be replaced when clicking links — instead, clicking a link in a non-ephemeral tab opens a new ephemeral tab in the same tab group. This makes non-ephemeral tabs ideal for notes you're actively working on or reference frequently. They essentially protect your working context by ensuring their content won't be replaced when you open new material.
+Non-ephemeral tabs function similarly to pinned tabs. Their content won't be replaced when clicking links. Instead, clicking a link in a non-ephemeral tab opens a new ephemeral tab in the same tab group. This makes non-ephemeral tabs ideal for notes you're actively working on or reference frequently. They essentially protect your working context by ensuring their content won't be replaced when you open new material.
 
 Ephemeral tabs, in contrast, embrace change. Their content will be replaced whenever you open any new note, making them perfect for exploration when you're not sure which note contains the information you need. This dynamic nature helps maintain a clean workspace by reducing tab clutter while still allowing you to browse extensively through your knowledge base.
 

@@ -65,7 +65,7 @@ Here’s a few rules for helping you choose the right one:
 Some users love features like [[advanced tab navigation]] but prefer not to have a vertical list of tabs. For them, the number of tabs is small and manageable. If you are one of them, you can turn on the [[background mode|Background mode]], which will **disable** Vertical Tabs but keep some features you love.
 
 > [!WARNING] Warning
-> By enabling the [[background mode]], you will lose access to most features of Vertical Tabs — you **cannot** even see Vertical Tabs. **Make sure this is intentional before enabling it.**
+> By enabling the [[background mode]], you will lose access to most features of Vertical Tabs: you **cannot** even see Vertical Tabs. **Make sure this is intentional before enabling it.**
 
 ![[background_mode.png|600]]
 

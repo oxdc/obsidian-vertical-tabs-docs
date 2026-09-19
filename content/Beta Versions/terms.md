@@ -32,7 +32,7 @@ You are **strictly prohibited** from:
 **Violation of any of these restrictions will result in immediate and permanent token revocation without refund.**
 
 ### Licensing and Usage
-- **Per-User License**: Beta access is licensed per individual user only—not per organization, team, or group
+- **Per-User License**: Beta access is licensed per individual user only, not per organization, team, or group
 - **Personal Devices Only**: You may install beta builds on your own personal devices, but each person who uses the beta must have their own individual subscription
 - **Work Projects**: You may use beta versions for work projects on your personal devices, but each team member or colleague requires their own separate subscription
 - **No Sharing Permitted**: You cannot share your access token or beta builds with others

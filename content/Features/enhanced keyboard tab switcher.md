@@ -5,7 +5,7 @@ title: Enhanced Keyboard Tab Switcher
 
 Obsidian's built-in keyboard shortcuts let you use <kbd>Ctrl/Cmd + 1-8</kbd> to switch between tabs, but this becomes limiting when you have more than 8 tabs open. Even with fewer tabs, the lack of visual feedback forces you to count tabs manually or guess which number corresponds to your target tab.
 
-Enhanced keyboard tab switching solves these problems by adding visual indicators and extended navigation. When you hold <kbd>Ctrl</kbd> or <kbd>Command</kbd>, numbered overlays (1-8) appear on your tabs, showing exactly which key will activate each tab. For workspaces with more than 8 tabs, use <kbd>Ctrl/Cmd + →</kbd> to shift the numbering to the next set of tabs, or <kbd>Ctrl/Cmd + ←</kbd> to go back. The feature automatically scrolls your tab view to keep the numbered tabs centered and visible—eliminating the need for mouse interaction entirely!
+Enhanced keyboard tab switching solves these problems by adding visual indicators and extended navigation. When you hold <kbd>Ctrl</kbd> or <kbd>Command</kbd>, numbered overlays (1-8) appear on your tabs, showing exactly which key will activate each tab. For workspaces with more than 8 tabs, use <kbd>Ctrl/Cmd + →</kbd> to shift the numbering to the next set of tabs, or <kbd>Ctrl/Cmd + ←</kbd> to go back. The feature automatically scrolls your tab view to keep the numbered tabs centered and visible, eliminating the need for mouse interaction entirely!
 
 ![[enhanced_keyboard_tab_switching_effects.png|600]]
 

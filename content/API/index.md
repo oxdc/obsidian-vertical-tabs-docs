@@ -22,6 +22,7 @@ Start with the [[getstarted|Getting Started]] guide to learn how to access and u
 - [[withVT|Global withVT helper]] - One-off access from the console and scripts
 - [[safe-access|Safe API Access]] - Robust patterns for accessing the API
 - [[customization|Customization]] - Customize tabs and groups
+- [[icons|Icon Rendering]] - Paint tab and group icons directly
 - [[events|Events]] - Subscribe to workspace events
 - [[menus|Menus]] - Add custom menu items
 - [[utilities|Utilities]] - Work with tabs and groups

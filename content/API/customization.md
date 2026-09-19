@@ -9,7 +9,10 @@ The API allows you to customize tabs and groups with custom icons, colors, and t
 
 ### Setting tab icon
 
-Set a custom icon for a tab. You can use built-in Lucide icon names or register custom icons:
+Set a custom icon for a tab. You can use built-in Lucide icon names or register custom icons.
+
+> [!TIP]
+> If your plugin needs to inject emoji, images, or non-registered SVG into the icon slot, use [[icons|Icon Rendering]] instead of `setTabIcon`.
 
 #### Using built-in icons
 

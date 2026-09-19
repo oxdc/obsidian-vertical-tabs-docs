@@ -8,7 +8,7 @@ title: Global withVT helper
 
 `withVT` runs a one-off callback with the [[index|Vertical Tabs API]] when Vertical Tabs is installed, enabled, and active. While Vertical Tabs is running normally, it is exposed as `window.withVT` for the Obsidian developer console, CustomJS, and similar contexts.
 
-When Vertical Tabs is unloaded, disabled, or inactive (including **Disable on this device**), `window.withVT` is `undefined` — check before calling:
+When Vertical Tabs is unloaded, disabled, or inactive (including **Disable on this device**), `window.withVT` is `undefined`. Check before calling:
 
 ```javascript
 if (typeof withVT === "undefined") {
@@ -46,6 +46,6 @@ const version = withVT?.((api) => api.getVersion());
 
 ## Related
 
-- [[getstarted|Getting Started]] — Plugin integration basics
-- [[safe-access|Safe API Access]] — Load/unload listeners and cached references
-- [[events|Events]] — `vertical-tabs:load` and `vertical-tabs:unload`
+- [[getstarted|Getting Started]]: Plugin integration basics
+- [[safe-access|Safe API Access]]: Load/unload listeners and cached references
+- [[events|Events]]: `vertical-tabs:load` and `vertical-tabs:unload`

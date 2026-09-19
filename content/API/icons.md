@@ -19,12 +19,10 @@ In contrast, some plugins (such as [Iconize](https://github.com/FlorianWoelki/ob
 ## Rendering tab icons
 
 ```typescript
-import { FileView } from "obsidian";
-
 this.registerEvent(
   this.app.workspace.on("vertical-tabs:render-tab-icon", (leaf, iconEl, tabEl) => {
-    const file = leaf.view instanceof FileView ? leaf.view.file : null;
-    if (!file) return;
+    const path = leaf.getViewState().state?.file as string | undefined;
+    if (!path) return;
 
     iconEl.empty();
     iconEl.createSpan({ text: "⭐" });
@@ -40,6 +38,20 @@ The event handler receives:
 - `tabEl`: the sidebar row containing the tab (`HTMLElement`)
 
 Triggering `request-icon-refresh` is necessary when your plugin loads after Vertical Tabs is already running, so that already-displayed tabs get their icons painted. If Vertical Tabs is not present, triggering this event has no effect.
+
+## Deferred tabs
+
+[Obsidian 1.7.2](https://obsidian.md/changelog/2024-09-19-desktop-v1.7.2/) introduced [deferred views](https://docs.obsidian.md/plugins/guides/defer-views): background tabs keep their layout state, but the full view is not created until the tab becomes visible. That reduces startup time and memory use when many notes are open.
+
+A deferred leaf uses a placeholder view (`DeferredView`) instead of the real view type (`MarkdownView`, `FileView`, and so on). Check `leaf.isDeferred` (available since Obsidian v1.7.2) to see whether a tab is still deferred.
+
+Because the file view has not been constructed yet, `leaf.view.file` is empty. If your handler relies on that property, the icon will stay missing until the user activates the tab and Obsidian loads the view. Read the file path from the leaf's persisted view state instead. It is available even while the tab is deferred:
+
+```typescript
+const path = leaf.getViewState().state?.file as string | undefined;
+```
+
+Do not call `leaf.loadIfDeferred()` from a render handler just to reach `leaf.view.file`. That would load every background tab on each refresh and cancel the performance benefit of deferred views.
 
 ## Rendering group icons
 

@@ -5,6 +5,12 @@ title: Menus
 
 The API allows you to add custom menu items to tab and group context menus. You can also manipulate existing menu sections by removing or reordering them.
 
+You can customize menus using two approaches:  
+- If you have a `VerticalTabsAPI` instance, use `api.onTabMenu`, `api.onTabsMenu`, or `api.onGroupMenu` to register your handlers.
+- If you don’t have access to the API instance, listen for the corresponding workspace events (e.g., `vertical-tabs:on-tab-menu`).
+
+Use only one method per handler to avoid duplicate registrations.
+
 ## Tab menu customization
 
 Register a callback to add custom items to tab context menus:
@@ -62,6 +68,33 @@ export default class MyPlugin extends Plugin {
 }
 ```
 
+## Multi-tab menu customization
+
+> [!VERSION]
+> **Available since:** API v1.4.0, Vertical Tabs v0.26.4
+
+When multiple tabs are selected, right-clicking on any of them will open a dedicated multi-select menu, rather than the standard single-tab menu. In this context, the `onTabMenu` callback will *not* be invoked. Instead, you should use the `onTabsMenu` API to customize the multi-tab context menu.
+
+```typescript
+const ref = api.onTabsMenu((menu, leaves) => {
+  menu.addItem((item) => {
+    item
+      .setTitle(`Custom action for ${leaves.length} tabs`)
+      .setIcon("star")
+      .setSection("my-plugin")
+      .onClick(() => {
+        console.log("Action for tabs:", leaves.map((leaf) => leaf.id));
+      });
+  });
+});
+```
+
+The callback receives:
+- `menu` — The `Menu` instance being built
+- `leaves` — An array of `WorkspaceLeaf` objects representing the selected tabs
+
+Unregister this callback just like `onTabMenu` by calling `ref.unload()`.
+
 ## Group menu customization
 
 Group menu customization works identically to tab menus:
@@ -82,6 +115,54 @@ const ref = api.onGroupMenu((menu, group) => {
 // Later: unregister
 ref.unload();
 ```
+
+## Workspace events
+
+> [!VERSION]
+> **Available since:** API v1.4.0, Vertical Tabs v0.26.4
+
+You can also respond to menu events using Obsidian's standard event system with `app.workspace.on(...)` instead of the callback API. These events are emitted immediately after Vertical Tabs adds its built-in items. Note that callback listeners run first (in the order they were registered), followed by workspace event listeners (also in registration order).
+
+> [!WARNING]
+> Do **not** register both a callback (such as `api.onTabMenu`) and the corresponding workspace event handler for the same action, or your handler will run twice.
+
+These events are only available when Vertical Tabs is installed and enabled.
+
+```typescript
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-tab-menu", (menu, leaf) => {
+    menu.addItem((item) => {
+      item
+        .setTitle("Custom Action")
+        .setIcon("star")
+        .setSection("my-plugin");
+    });
+  })
+);
+
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-tabs-menu", (menu, leaves) => {
+    menu.addItem((item) => {
+      item
+        .setTitle(`Custom action for ${leaves.length} tabs`)
+        .setSection("my-plugin");
+    });
+  })
+);
+
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-group-menu", (menu, group) => {
+    menu.addItem((item) => {
+      item
+        .setTitle("Custom Group Action")
+        .setIcon("folder")
+        .setSection("my-plugin");
+    });
+  })
+);
+```
+
+Event payloads mirror the callback API: `(menu, leaf)` for tab menus, `(menu, leaves)` for multi-tab menus, and `(menu, group)` for group menus.
 
 ## Menu sections
 
@@ -195,14 +276,15 @@ Menu.prototype.showAtPosition = function (position) {
 
 When `isVTMenu()` returns `true`, the menu's `VTMenuAttribute` property identifies which specific menu was opened:
 
-| `VTMenuAttribute`       | Description                                  |
-| ----------------------- | -------------------------------------------- |
-| `"vt-tab-menu"`         | Tab context menu                             |
-| `"vt-group-menu"`       | Group context menu                           |
-| `"vt-sort-menu"`        | Sort menu in the navigation header           |
-| `"vt-tab-switcher-menu"`| Tab switcher menu                            |
-| `"vt-status-bar-menu"`  | Zen mode status bar menu                     |
-| `"vt-nav-history-menu"` | Navigation history menu (back/forward)       |
+| `VTMenuAttribute`         | Description                                  |
+| ------------------------- | -------------------------------------------- |
+| `"vt-tab-menu"`           | Tab context menu                             |
+| `"vt-multi-select-menu"`  | Multi-select tab context menu                |
+| `"vt-group-menu"`         | Group context menu                           |
+| `"vt-sort-menu"`          | Sort menu in the navigation header           |
+| `"vt-tab-switcher-menu"`  | Tab switcher menu                            |
+| `"vt-status-bar-menu"`    | Zen mode status bar menu                     |
+| `"vt-nav-history-menu"`   | Navigation history menu (back/forward)       |
 
 ```typescript
 const original = Menu.prototype.showAtPosition;

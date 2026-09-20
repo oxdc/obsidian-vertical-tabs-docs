@@ -3,7 +3,7 @@ title: Events
 ---
 ## Overview
 
-The Vertical Tabs plugin emits several workspace events that your plugin can listen to. These events notify you of plugin lifecycle changes, metadata updates, workspace refresh operations, and icon rendering.
+The Vertical Tabs plugin emits several workspace events that your plugin can listen to. These events notify you of plugin lifecycle changes, metadata updates, workspace refresh operations, icon rendering, and context menu construction.
 
 ## Plugin lifecycle
 
@@ -160,6 +160,37 @@ this.app.workspace.trigger("vertical-tabs:request-icon-refresh");
 `vertical-tabs:request-icon-refresh` asks Vertical Tabs to re-paint every visible tab and group icon. Trigger it after you register listeners (if Vertical Tabs may already be running) and whenever your icon data changes.
 
 If Vertical Tabs is not installed or not enabled, these events will not be available; no one will emit or respond to them.
+
+## Menu events
+
+> [!VERSION]
+> **Available since:** API v1.4.0, Vertical Tabs v0.26.4
+
+Vertical Tabs emits workspace events after constructing tab, multi-tab (multi-select), and group context menus. These events allow your plugin to add, modify, or remove menu items programmatically. They mirror the behavior of the callback-based [[menus|API methods]] (e.g., `api.onTabMenu` and `api.onGroupMenu`) and provide an alternative integration surface.
+
+**Register your handler using either the event or the callback (not both), to avoid duplicate actions.** See [[menus|Menus]] for complete details and advanced usage.
+
+```typescript
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-tab-menu", (menu, leaf) => {
+    // Add custom items for this tab
+  })
+);
+
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-tabs-menu", (menu, leaves) => {
+    // Add custom items for the selected tabs
+  })
+);
+
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:on-group-menu", (menu, group) => {
+    // Add custom items for this group
+  })
+);
+```
+
+These events are only available when Vertical Tabs is installed and enabled.
 
 ## Event registration
 

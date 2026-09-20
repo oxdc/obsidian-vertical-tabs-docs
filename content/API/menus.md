@@ -301,6 +301,106 @@ Menu.prototype.showAtPosition = function (position) {
 };
 ```
 
+## Identifying built-in menu actions
+
+> [!VERSION]
+> **Available since:** API v1.4.0, Vertical Tabs v0.26.4
+
+Built-in items on Vertical Tabs context menus set `MenuItem.VTMenuAction` to a stable identifier. Separators, items added by other plugins, and items copied from Obsidian's pane menu do not have this property.
+
+```typescript
+api.onTabMenu((menu, leaf) => {
+  menu.items = menu.items.filter((item) => item.VTMenuAction !== "set-icon");
+});
+```
+
+### Tab menu (`vt-tab-menu`)
+
+| `VTMenuAction` | Description |
+| -------------- | ----------- |
+| `"bookmark"` | Bookmark |
+| `"bookmark-and-close"` | Bookmark and close |
+| `"default-view"` | Default group view |
+| `"continuous-view"` | Continuous group view |
+| `"column-view"` | Column group view |
+| `"mission-control-view"` | Mission control group view |
+| `"close"` | Close |
+| `"close-others"` | Close others |
+| `"close-tabs-to-top"` | Close tabs to the top |
+| `"close-tabs-to-bottom"` | Close tabs to the bottom |
+| `"close-all"` | Close all |
+| `"pin"` | Pin or unpin |
+| `"rename"` | Rename |
+| `"set-color"` | Change color |
+| `"set-icon"` | Change icon |
+| `"move-to-new-window"` | Move to new window |
+| `"split-right"` | Split right |
+| `"split-down"` | Split down |
+| `"open-in-new-window"` | Open in new window |
+| `"move-tab"` | Move this tab to... |
+| `"new-group"` | Move to a new group |
+| `"new-group-with-name"` | Move to a new group with name... |
+| `"copy-as-internal-link"` | Copy as internal link |
+| `"copy-as-embed"` | Copy as embed |
+| `"insert-as-internal-link"` | Insert as internal link |
+| `"insert-as-embed"` | Insert as embed |
+| `"back"` | Back |
+| `"forward"` | Forward |
+| `"browse-history"` | Browse history |
+| `"bookmark-history"` | Bookmark history |
+| `"open-history-in-new-group"` | Open history in new group |
+| `"clear-history"` | Clear history |
+| `"inactive"` | Inactive placeholder (deferred tabs) |
+| `"load-history"` | Load history (deferred tabs) |
+| `"zoom"` | Zoom submenu (desktop) |
+| `"zoom-in"` | Zoom in |
+| `"zoom-out"` | Zoom out |
+| `"reset-zoom"` | Reset zoom |
+| `"more-options"` | More options |
+| `"toggle-reader-mode"` | Toggle reader mode (webview) |
+| `"save-to-vault"` | Save to vault (webview) |
+
+Group-view items appear only when a single group is visible. History items appear only for navigable tabs. Zoom items appear only when per-tab zoom is enabled. `"move-tab"` is desktop-only; on mobile the move destinations are added directly to the parent menu. `"new-group"` and `"new-group-with-name"` are set on those destination items.
+
+### Multi-select menu (`vt-multi-select-menu`)
+
+| `VTMenuAction` | Description |
+| -------------- | ----------- |
+| `"close"` | Close selected tabs |
+| `"pin-all"` | Pin all |
+| `"unpin-all"` | Unpin all |
+| `"set-color"` | Change color |
+| `"set-icon"` | Change icon |
+| `"move-to-new-window"` | Move to new window |
+| `"move-tabs"` | Move selected tabs to... |
+| `"new-group"` | Move to a new group |
+| `"new-group-with-name"` | Move to a new group with name... |
+| `"copy-as-internal-links"` | Copy as internal links |
+| `"copy-as-embeds"` | Copy as embeds |
+| `"bookmark"` | Bookmark selected tabs |
+
+### Group menu (`vt-group-menu`)
+
+| `VTMenuAction` | Description |
+| -------------- | ----------- |
+| `"hide"` | Show or hide |
+| `"rename"` | Rename |
+| `"set-color"` | Change color |
+| `"set-icon"` | Change icon |
+| `"default-view"` | Default view |
+| `"continuous-view"` | Continuous view |
+| `"column-view"` | Column view |
+| `"mission-control-view"` | Mission control view |
+| `"bookmark-all"` | Bookmark all |
+| `"bookmark-and-close-all"` | Bookmark and close all |
+| `"close-all"` | Close all |
+| `"copy-as-internal-links"` | Copy as internal links |
+| `"copy-as-list"` | Copy as list |
+| `"copy-as-embeds"` | Copy as embeds |
+| `"insert-as-internal-links"` | Insert as internal links |
+| `"insert-as-list"` | Insert as list |
+| `"insert-as-embeds"` | Insert as embeds |
+
 ## Common patterns
 
 ### Conditional menu items

@@ -4,7 +4,7 @@ title: "Beta Downloads"
 
 To download and manually install the latest beta build, paste your access token below. You must be a [[beta program|Beta Program]] subscriber to obtain an access token. Click [here](https://ko-fi.com/oxdcq) to subscribe.
 
-Subscription (**$1.99/m**) is only required to download beta versions. Once installed, you may use it as long as you want.
+Subscription (**$2.99/m**) is only required to download beta versions. Once installed, you may use it as long as you want.
 
 <div class="vt-vertical-spacing"></div>
 

@@ -7,7 +7,7 @@ title: Vertical Tabs for Obsidian
 > [!TIP] In case you missed it...
 > The latest beta introduces a **redesigned Mission Control View** (visual tab management with drag-and-drop support) and the ability to **customize tabs and groups with different colors and icons**. These features are currently available through the [[beta faq|Beta Program]]. Click [here](https://ko-fi.com/oxdcq) to subscribe.
 >
-> **Subscription ($1.99/m) is only required to download beta versions. Once installed, you may use it as long as you want.**
+> **Subscription ($2.99/m) is only required to download beta versions. Once installed, you may use it as long as you want.**
 > 
 > <video src="https://github.com/user-attachments/assets/caf6bc43-2ed9-4cb8-887d-a205b2f5fe6a" width="500" autoplay>
 

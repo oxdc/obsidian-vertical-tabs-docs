@@ -6,7 +6,7 @@ title: Icon Rendering
 > [!VERSION]
 > **Available since:** API v1.3.0, Vertical Tabs v0.26.3
 
-Other plugins can draw custom icons into the tab and group icon slots in the Vertical Tabs sidebar by listening to workspace events. Unlike using [[customization#Setting tab icon|setTabIcon]], you are not restricted to Obsidian-registered icon IDs. You can inject emoji, images, custom SVG, or any other DOM content you like.
+Other plugins can draw custom icons into the tab and group icon slots in the Vertical Tabs sidebar, the Enhanced Tab Switcher, and the Tab Switcher Modal by listening to workspace events. Unlike using [[customization#Setting tab icon|setTabIcon]], you are not restricted to Obsidian-registered icon IDs. You can inject emoji, images, custom SVG, or any other DOM content you like.
 
 There is no direct `VerticalTabsAPI` method for this functionality. Instead, you should register listeners using `this.registerEvent(this.app.workspace.on(...))`. Keep in mind that if Vertical Tabs is not installed or not enabled, these events will not be fired.
 
@@ -35,7 +35,7 @@ The event handler receives:
 
 - `leaf`: the `WorkspaceLeaf` associated with the tab
 - `iconEl`: the element that displays the icon (`HTMLElement`)
-- `tabEl`: the sidebar row containing the tab (`HTMLElement`)
+- `tabEl`: the element that contains the tab (`HTMLElement`). This is the sidebar row, a menu item in the Enhanced Tab Switcher, or a suggestion in the Tab Switcher Modal.
 
 Triggering `request-icon-refresh` is necessary when your plugin loads after Vertical Tabs is already running, so that already-displayed tabs get their icons painted. If Vertical Tabs is not present, triggering this event has no effect.
 
@@ -69,7 +69,7 @@ The event handler receives:
 
 - `group`: the `WorkspaceParent` representing the group
 - `iconEl`: the icon container element (`HTMLElement`)
-- `groupEl`: the sidebar row for the group (`HTMLElement`)
+- `groupEl`: the element that contains the group (`HTMLElement`). This is the sidebar row, a menu item in the Enhanced Tab Switcher, or a suggestion in the Tab Switcher Modal.
 
 ## Requesting a refresh
 
@@ -79,7 +79,7 @@ If your icon data changes (for example when a pack is loaded, a rule is updated,
 this.app.workspace.trigger("vertical-tabs:request-icon-refresh");
 ```
 
-This call will update every visible tab and group icon slot.
+This call will update every visible sidebar tab and group icon slot. The Enhanced Tab Switcher and the Tab Switcher Modal paint their icons when they open.
 
 ## When events are triggered
 
@@ -88,14 +88,15 @@ Vertical Tabs first paints its default icon, then triggers the relevant render e
 Events will **not** be triggered in the following situations:
 
 - The user has set a Vertical Tabs custom icon (through `setTabIcon`, `setGroupIcon`, or the "Change icon" UI)
+- The tab icon source is defined by a frontmatter property
 - The Alt+hover drag handle is visible
 - A favicon is displayed for a webview
 
-Listeners are called in registration order. If multiple listeners make changes, the last one to modify the icon will determine the result shown. These events affect only the Vertical Tabs sidebar (vertical tabs), not native Obsidian tab headers (horizontal tabs).
+Listeners are called in registration order. If multiple listeners make changes, the last one to modify the icon will determine the result shown. These events affect Vertical Tabs' sidebar, Enhanced Tab Switcher, and Tab Switcher Modal. They do not affect native Obsidian tab headers (horizontal tabs).
 
 ## Tips
 
-- Modify `iconEl` and its children to render your icon. You can also use `tabEl` or `groupEl` if you need to access the entire row.
+- Modify `iconEl` and its children to render your icon. You can also use `tabEl` or `groupEl` to access the whole sidebar row, menu item, or suggestion.
 - It is best to clear `iconEl` using `iconEl.empty()` before adding your content.
 - Keep event handlers synchronous and lightweight, because they run for every visible tab during a refresh.
 - If you load icons asynchronously, check that `iconEl.isConnected` is still true and that the `leaf` continues to display the same file before updating the icon.

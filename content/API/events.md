@@ -139,7 +139,7 @@ this.registerEvent(
 > [!VERSION]
 > **Available since:** API v1.3.0, Vertical Tabs v0.26.3
 
-Fired after Vertical Tabs paints a sidebar icon slot, so another plugin can mutate the DOM. These events are not part of `VerticalTabsAPI`. See [[icons|Icon Rendering]] for the full guide.
+Fired after Vertical Tabs paints a tab or group icon slot, so another plugin can mutate the DOM. Slots include the sidebar, a menu item in the Enhanced Tab Switcher, and a suggestion in the Tab Switcher Modal. These events are not part of `VerticalTabsAPI`. See [[icons|Icon Rendering]] for the full guide.
 
 ```typescript
 this.registerEvent(
@@ -157,7 +157,7 @@ this.registerEvent(
 this.app.workspace.trigger("vertical-tabs:request-icon-refresh");
 ```
 
-`vertical-tabs:request-icon-refresh` asks Vertical Tabs to re-paint every visible tab and group icon. Trigger it after you register listeners (if Vertical Tabs may already be running) and whenever your icon data changes.
+`vertical-tabs:request-icon-refresh` asks Vertical Tabs to re-paint every visible sidebar tab and group icon. The Enhanced Tab Switcher and the Tab Switcher Modal paint their icons when they open. Trigger it after you register listeners (if Vertical Tabs may already be running) and whenever your icon data changes.
 
 If Vertical Tabs is not installed or not enabled, these events will not be available; no one will emit or respond to them.
 

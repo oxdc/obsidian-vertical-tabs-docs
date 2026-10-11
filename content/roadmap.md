@@ -9,8 +9,10 @@ title: Roadmap
 >
 > - [Tab numbers](https://github.com/oxdc/obsidian-vertical-tabs/issues/220)
 >   - Show numbers on tabs for keyboard shortcuts. Numbers can stay visible, or appear only while Ctrl/Cmd or Alt/Option is held.
-> - Sessions (Supercharged Workspaces)
+> - [Sessions (Supercharged Workspaces)](https://forum.obsidian.md/t/better-workspaces-group-features-visual-separation/97612)
 >   - Save your workspace as named sessions, automatically persisted. Easily create, switch between, or fork sessions to separate and manage your workspaces.
+> - Unload background tabs
+>   - Unload background or inactive tabs to free up memory without closing them.
 
 ## Coming Soon in Beta
 

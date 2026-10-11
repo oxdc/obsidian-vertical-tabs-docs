@@ -3,22 +3,46 @@ cssclasses:
   - roadmap
 title: Roadmap
 ---
-## 🚧 Active
+## Active
 
->[!INFO] Will be released in version 0.27.0-beta and is expected to be available to subscribers in **September 2026**.
+>[!INFO] Will be released in version 0.27.0-beta and is expected to be available to subscribers in **October 2026**.
 >
-> - [Chrome-like Tab Groups](https://forum.obsidian.md/t/tabs-of-tab-groups/53162/17)
->   - Visual tab grouping with colored headers and collapsible sections, similar to Chrome's tab group feature.
+> - [Tab numbers](https://github.com/oxdc/obsidian-vertical-tabs/issues/220)
+>   - Show numbers on tabs for keyboard shortcuts. Numbers can stay visible, or appear only while Ctrl/Cmd or Alt/Option is held.
+> - Sessions (Supercharged Workspaces)
+>   - Save your workspace as named sessions, automatically persisted. Easily create, switch between, or fork sessions to separate and manage your workspaces.
 
-## ✨ Coming Soon in Beta
+## Coming Soon in Beta
 
 
-## 📌 Planned
+## Planned
+
+- [Chrome-like Tab Groups](https://forum.obsidian.md/t/tabs-of-tab-groups/53162/17)
+  - Visual tab grouping with colored headers and collapsible sections, similar to Chrome's tab group feature.
+- [Multiple views/tabs in sidebars on Mobile](https://github.com/oxdc/obsidian-vertical-tabs/discussions/207)
+  - Stack sidebar views such as Local Graph, Search, and Backlinks on mobile.
 
 
-## 🧪 Shipped in Beta
+## Shipped in Beta
 
->[!INFO] Released in version 0.25.0-beta. Publicly available in **July 2027**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>[!INFO] Released in version 0.26.0-beta. Publicly available in **September 2027**. [Subscribe here](https://ko-fi.com/oxdcq) for immediate access.
+>
+> *A subscription is needed only for downloading; enjoy unlimited use after installation.*
+>
+> - Smart Zen Mode
+>   - Automatically turn on Zen Mode when your workspace becomes too crowded.
+> - [Pinned tab customization](https://github.com/oxdc/obsidian-vertical-tabs/discussions/223)
+>   - Select a default, compact, or icon-only style for pinned tabs in the horizontal tab bar
+> - [Sticky pinned tabs](https://github.com/oxdc/obsidian-vertical-tabs/discussions/223)
+>   - Keep pinned tabs stuck to the left as you scroll.
+> - [Zen Mode in pop-out windows](https://github.com/oxdc/obsidian-vertical-tabs/issues/233)
+>   - Apply Zen Mode to pop-out windows and switch their tabs with the enhanced tab switcher.
+> - [Sort tabs by modified time](https://github.com/oxdc/obsidian-vertical-tabs/issues/242)
+>   - Sort tabs by file modified time.
+> - Frontmatter tab icons
+>   - Set tab icons based on frontmatter properties.
+
+>[!INFO] Released in version 0.25.0-beta. Publicly available in **July 2027**.
 >
 > - Panorama View
 >   - Alt/Option+click the Mission Control toggle to see all tabs and groups at once.
@@ -26,6 +50,8 @@ title: Roadmap
 >   - Commands for collapsing nested splits into a single level.
 > - Tab search modal
 >   - A dedicated modal for searching, filtering, and jumping to tabs.
+> - Improved Mission Control View
+>   - Edit group titles, open the group context menu, show custom tab colors, and use Power Drag in the Mission Control View.
 
 >[!INFO] Released in version 0.24.0-beta. Publicly available in **June 2027**.
 >
@@ -74,18 +100,10 @@ title: Roadmap
 >   - Public API and events for integrations with other plugins.
 
 >[!INFO] Released in version 0.19.0-beta. Publicly available in **October 2026**.
->
-> *A subscription is needed only for downloading; enjoy unlimited use after installation.*
->
 > - [Tab Sorting in the Background](https://github.com/oxdc/obsidian-vertical-tabs/issues/170)
 >   - Sort tabs in Background Mode without requiring the Vertical Tabs UI.
 
->[!INFO] Released in version 0.18.0-beta. Publicly available in **September 2026**.
->
-> - [Customization](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
->   - Customize tabs and groups with colors, icons, and titles.
-
-## 🎉 Shipped in Public Release
+## Shipped in Public Release
 
 - [Multi-select and drag-and-drop](https://github.com/oxdc/obsidian-vertical-tabs/issues/32)
   - Select multiple tabs to reorder or move across groups.
@@ -97,3 +115,9 @@ title: Roadmap
   - Early access to test features before public release.
 - Scrollable horizontal tabs
   - Horizontal scrolling when tabs overflow; auto-scroll to the active tab.
+- [Tab closing behavior](https://github.com/oxdc/obsidian-vertical-tabs/issues/228)
+  - Choose which tab becomes active after closing the current tab: the tab on the left/right, or the most recently active tab.
+- [Customization](https://github.com/oxdc/obsidian-vertical-tabs/discussions/113)
+  - Customize tabs and groups with colors, icons, and titles.
+- [[events|Icon and menu events]]
+  - Third-party plugins can use event-based APIs to render tab/group icons and add items to Vertical Tabs' context menus.

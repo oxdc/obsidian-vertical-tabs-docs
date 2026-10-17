@@ -134,6 +134,42 @@ this.registerEvent(
 );
 ```
 
+## Workspace refresh changes
+
+> [!VERSION]
+> **Available since:** API v1.5.0, Vertical Tabs v0.27.3
+
+Fired at the same time as `vertical-tabs:refresh`. Newly opened tabs and groups are the live objects, so you can use them without looking them up by ID. Closed tabs and groups stay as IDs, because those objects are already gone.
+
+```typescript
+this.registerEvent(
+  this.app.workspace.on("vertical-tabs:refresh-changes", (event) => {
+    for (const leaf of event.newTabs) {
+      console.log("Opened:", leaf.id);
+    }
+    for (const group of event.newGroups) {
+      console.log("New group:", group.id);
+    }
+    for (const tabId of event.closedTabs) {
+      console.log("Closed:", tabId);
+    }
+  })
+);
+```
+
+**Event data:**
+
+```typescript
+interface RefreshChanges {
+  newTabs: WorkspaceLeaf[];       // Newly opened tabs
+  newGroups: WorkspaceParent[];   // Newly created groups
+  closedTabs: string[];           // IDs of closed tabs
+  closedGroups: string[];         // IDs of closed groups
+}
+```
+
+Like `vertical-tabs:refresh`, this event does not fire when nothing was opened or closed.
+
 ## Icon rendering
 
 > [!VERSION]
